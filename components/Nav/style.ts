@@ -17,5 +17,10 @@ export const Li = styled("li")(() => {
     letterSpacing: "1%",
     color: theme.palette.text.primary,
     cursor: "pointer",
+    transition: ".3s",
+
+    "&:hover": {
+      color: "#C6A687",
+    },
   };
 });

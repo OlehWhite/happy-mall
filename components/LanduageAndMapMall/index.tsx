@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Language from "@/components/Language";
-import MapMall from "@/components/MapMall";
 import { Container } from "@/components/LanduageAndMapMall/style";
+import Language from "@/components/LanduageAndMapMall/Language";
+import MapMall from "@/components/LanduageAndMapMall/MapMall";
 
 const LanguageAndMapMall: FC = () => {
   return (

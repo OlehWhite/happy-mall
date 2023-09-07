@@ -2,12 +2,12 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
   palette: {
-    // primary: {
-    //   main: "#1E1E21",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
+    primary: {
+      main: "#1E1E21",
+      light: "#494843",
+      dark: "#1E1E21",
+      contrastText: "#C9C7C2",
+    },
     // secondary: {
     //   main: "",
     //   light: "",
@@ -18,6 +18,8 @@ export const theme = createTheme({
       primary: "#FDFCFA",
       secondary: "#C9C7C2",
       tertiary: "#C6A687",
+      contrastText: "rgba(30, 30, 33, 1)",
+      hover: "#C6A687",
     },
     // background: {
     //   paper: "",

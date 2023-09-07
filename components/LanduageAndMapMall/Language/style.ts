@@ -16,7 +16,3 @@ export const Select = styled("select")(() => {
     border: 0,
   };
 });
-
-export const Option = styled("option")(() => {
-  return {};
-});

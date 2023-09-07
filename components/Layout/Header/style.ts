@@ -6,7 +6,9 @@ export const HeaderBlock = styled("header")(() => {
     justifyContent: "space-between",
     height: 72,
     width: "100%",
-    maxWidth: 1440,
+    maxWidth: 1920,
     margin: "0 auto",
+    padding: "0 32px",
+    boxSizing: "border-box",
   };
 });
