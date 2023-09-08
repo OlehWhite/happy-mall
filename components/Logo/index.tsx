@@ -4,7 +4,7 @@ import { Container, LogoImg } from "components/Logo/style";
 const Logo: FC = () => {
   return (
     <Container>
-      <LogoImg src="logo.png" alr="Logo" title="Logo" />
+      <LogoImg src="logo.png" alt="Logo" title="Logo" />
     </Container>
   );
 };

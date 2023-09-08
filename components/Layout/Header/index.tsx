@@ -1,13 +1,13 @@
 import { FC } from "react";
+import LanguageAndMapMall from "@/components/LanduageAndMapMall";
 import { HeaderBlock } from "components/Layout/Header/style";
 import Logo from "@/components/Logo";
 import Nav from "@/components/Nav";
-import LanguageAndMapMall from "@/components/LanduageAndMapMall";
 
 const Header: FC = () => {
   return (
     <HeaderBlock>
-      <Logo />
+      <Logo currentWidth={84} />
       <Nav />
       <LanguageAndMapMall />
     </HeaderBlock>

@@ -3,16 +3,15 @@ import { styled } from "@mui/material";
 export const Container = styled("div")(() => {
   return {
     display: "flex",
-    alignItems: "center",
-    height: 72,
+    alignItems: "flex-start",
+    height: 50,
   };
 });
 
 export const LogoImg = styled("img")(() => {
   return {
     display: "flex",
-    width: 84,
-    height: 14,
+    width: 131,
     cursor: "pointer",
   };
 });

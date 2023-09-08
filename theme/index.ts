@@ -19,7 +19,7 @@ export const theme = createTheme({
       secondary: "#C9C7C2",
       tertiary: "#C6A687",
       contrastText: "rgba(30, 30, 33, 1)",
-      hover: "#C6A687",
+      hover: "rgba(175, 139, 104, 1)",
     },
     // background: {
     //   paper: "",
