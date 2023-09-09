@@ -50,7 +50,7 @@ export const WrapperPlay = styled("div")(() => {
     transition: ".3s",
 
     "&:hover": {
-      border: `2px solid ${theme.palette.text.tertiary}`,
+      border: `2px solid #C6A687`,
     },
   };
 });
