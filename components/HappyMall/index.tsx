@@ -10,7 +10,7 @@ import {
   WrapperSmallImg,
   ImgSmall,
   WrapperPlay,
-} from "@/components/HappyMall/style";
+} from "/components/HappyMall/style";
 import MapMall from "@/components/LanduageAndMapMall/MapMall";
 import { theme } from "@/theme";
 

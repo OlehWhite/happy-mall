@@ -9,7 +9,7 @@ import {
   Block,
   Text,
   WrapperBlocks,
-} from "components/Layout/Footer/BlockInfo/style";
+} from "@/components/Layout/Footer/BlockInfo/style";
 import MapMall from "@/components/LanduageAndMapMall/MapMall";
 
 const BlockInfo: FC = () => {
