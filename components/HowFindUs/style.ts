@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {};
@@ -18,7 +17,6 @@ export const WrapperImg = styled("div")(() => {
 
 export const Img = styled("img")(() => {
   return {
-    // position: "relative",
     zIndex: "-3",
     width: "100%",
     objectFit: "cover",
@@ -33,7 +31,7 @@ export const WrapperInfo = styled("div")(() => {
   };
 });
 
-export const Title = styled("h1")(() => {
+export const Title = styled("h1")(({ theme }) => {
   return {
     marginTop: 326,
     fontSize: 64,
@@ -43,7 +41,7 @@ export const Title = styled("h1")(() => {
   };
 });
 
-export const Button = styled("button")(() => {
+export const Button = styled("button")(({ theme }) => {
   return {
     zIndex: 1,
     width: 166,

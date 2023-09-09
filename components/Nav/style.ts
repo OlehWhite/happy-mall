@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "/theme/index";
 
 export const Ul = styled("ul")(() => {
   return {
@@ -8,7 +7,7 @@ export const Ul = styled("ul")(() => {
   };
 });
 
-export const Li = styled("li")(() => {
+export const Li = styled("li")(({ theme }) => {
   return {
     listStyleType: "none",
     marginRight: 20,

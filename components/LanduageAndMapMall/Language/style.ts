@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -8,7 +7,7 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Select = styled("select")(() => {
+export const Select = styled("select")(({ theme }) => {
   return {
     backgroundColor: "#ffffff00",
     color: theme.palette.text.primary,

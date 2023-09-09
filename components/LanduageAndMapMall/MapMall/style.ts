@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -19,7 +18,7 @@ export const Img = styled("img")(() => {
   return {};
 });
 
-export const Text = styled("text")(() => {
+export const Text = styled("text")(({ theme }) => {
   return {
     color: theme.palette.text.tertiary,
     fontWeight: 500,

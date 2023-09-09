@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -7,7 +6,7 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Title = styled("div")(() => {
+export const Title = styled("div")(({ theme }) => {
   return {
     color: theme.palette.text.primary,
     marginBottom: 16,
@@ -20,7 +19,7 @@ export const Form = styled("form")(() => {
   };
 });
 
-export const Input = styled("input")(() => {
+export const Input = styled("input")(({ theme }) => {
   return {
     border: `1px solid ${theme.palette.primary.light}`,
     backgroundColor: "#ffffff00",
@@ -41,7 +40,7 @@ export const Input = styled("input")(() => {
   };
 });
 
-export const Button = styled("button")(() => {
+export const Button = styled("button")(({ theme }) => {
   return {
     width: 48,
     height: 48,
@@ -69,7 +68,7 @@ export const Block = styled("div")(() => {
   };
 });
 
-export const Text = styled("h2")(() => {
+export const Text = styled("h2")(({ theme }) => {
   return {
     fontWeight: 400,
     fontSize: 16,

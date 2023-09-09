@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -31,7 +30,7 @@ export const Img = styled("img")(() => {
   };
 });
 
-export const WrapperPlay = styled("div")(() => {
+export const WrapperPlay = styled("div")(({ theme }) => {
   return {
     position: "absolute",
     top: "50%",
@@ -62,7 +61,7 @@ export const WrapperAboutMall = styled("div")(() => {
   };
 });
 
-export const Title = styled("h1")(() => {
+export const Title = styled("h1")(({ theme }) => {
   return {
     fontSize: 52,
     lineHeight: "63px",
@@ -71,7 +70,7 @@ export const Title = styled("h1")(() => {
   };
 });
 
-export const Line = styled("hr")(() => {
+export const Line = styled("hr")(({ theme }) => {
   return {
     width: 195,
     borderColor: theme.palette.text.tertiary,
@@ -79,7 +78,7 @@ export const Line = styled("hr")(() => {
   };
 });
 
-export const Text = styled("p")(() => {
+export const Text = styled("p")(({ theme }) => {
   return {
     fontSize: 16,
     fontWeight: 400,

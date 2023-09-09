@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -9,7 +8,7 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Link = styled("a")(() => {
+export const Link = styled("a")(({ theme }) => {
   return {
     fontSize: 16,
     fontWeight: 400,

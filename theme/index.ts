@@ -8,12 +8,6 @@ export const theme = createTheme({
       dark: "#1E1E21",
       contrastText: "#C9C7C2",
     },
-    // secondary: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
     text: {
       primary: "#FDFCFA",
       secondary: "#C9C7C2",
@@ -21,17 +15,5 @@ export const theme = createTheme({
       contrastText: "#1E1E21",
       hover: "#AF8B68",
     },
-    // background: {
-    //   paper: "",
-    //   default: "",
-    // },
-    // success: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    // },
-    // error: {
-    //   main: "",
-    // },
   },
 });

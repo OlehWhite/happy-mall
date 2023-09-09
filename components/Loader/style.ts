@@ -1,6 +1,5 @@
 import { styled } from "@mui/material";
 import { CircularProgress } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -27,7 +26,7 @@ export const Img = styled("img")(() => {
   };
 });
 
-export const Circular = styled(CircularProgress)(() => {
+export const Circular = styled(CircularProgress)(({ theme }) => {
   return {
     color: theme.palette.text.tertiary,
     "& .MuiCircularProgress-svg": {

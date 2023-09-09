@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
   return {
@@ -18,7 +17,7 @@ export const Img = styled("img")(() => {
   return {};
 });
 
-export const WrapperImg = styled("div")(() => {
+export const WrapperImg = styled("div")(({ theme }) => {
   return {
     display: "flex",
     justifyContent: "center",
@@ -37,7 +36,7 @@ export const WrapperImg = styled("div")(() => {
   };
 });
 
-export const PrivacyPolicy = styled("div")(() => {
+export const PrivacyPolicy = styled("div")(({ theme }) => {
   return {
     fontSize: 16,
     fontWeight: 400,
@@ -57,7 +56,7 @@ export const Text = styled("p")(() => {
   return { marginRight: 20, margin: "8px 0" };
 });
 
-export const B = styled("span")(() => {
+export const B = styled("span")(({ theme }) => {
   return {
     color: theme.palette.text.primary,
   };
