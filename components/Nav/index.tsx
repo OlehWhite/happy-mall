@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { NAV_LINKS } from "components/Nav/mocData";
-import { Ul, Li } from "components/Nav/style";
+import { Ul, Li } from "./style";
 
 const Nav: FC = () => {
   return (

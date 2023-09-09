@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FooterBlock } from "@/components/Layout/Footer/style";
+import { FooterBlock } from "./style";
 import BlockLinks from "@/components/Layout/Footer/BlockLinks";
 import BlockInfo from "@/components/Layout/Footer/BlockInfo";
 import BlockMenu from "@/components/Layout/Footer/BlockMenu";

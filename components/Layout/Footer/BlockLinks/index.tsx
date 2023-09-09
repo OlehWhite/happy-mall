@@ -9,7 +9,7 @@ import {
   WrapperText,
   Container,
   Link,
-} from "@/components/Layout/Footer/BlockLinks/style";
+} from "./style";
 import IMGInstagram from "public/instagram.png";
 import IMGFacebook from "public/facebook.png";
 import IMGTiktok from "public/tiktok.png";

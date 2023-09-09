@@ -1,8 +1,5 @@
 import { FC } from "react";
-import {
-  Container,
-  Select,
-} from "@/components/LanduageAndMapMall/Language/style";
+import { Container, Select } from "./style";
 
 const languages = ["RU", "EN", "RO"];
 

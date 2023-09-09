@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Container, LogoImg } from "components/Logo/style";
+import { Container, LogoImg } from "./style";
 
 const Logo: FC = () => {
   return (

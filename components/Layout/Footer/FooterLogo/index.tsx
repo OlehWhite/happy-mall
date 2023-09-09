@@ -1,8 +1,5 @@
 import { FC } from "react";
-import {
-  Container,
-  LogoImg,
-} from "@/components/Layout/Footer/FooterLogo/style";
+import { Container, LogoImg } from "./style";
 
 const FooterLogo: FC = () => {
   return (

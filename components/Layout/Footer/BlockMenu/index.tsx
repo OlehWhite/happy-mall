@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Container, Link } from "@/components/Layout/Footer/BlockMenu/style";
+import { Container, Link } from "./style";
 
 const menuLinks = [
   "Магазины",

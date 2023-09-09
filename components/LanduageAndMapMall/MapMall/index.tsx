@@ -1,10 +1,5 @@
 import { FC } from "react";
-import {
-  Container,
-  WrapperMap,
-  Text,
-  Img,
-} from "@/components/LanduageAndMapMall/MapMall/style";
+import { Container, WrapperMap, Text, Img } from "./style";
 
 const MapMall: FC = () => {
   return (

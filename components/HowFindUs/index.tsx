@@ -6,7 +6,7 @@ import {
   WrapperInfo,
   Title,
   Button,
-} from "@/components/HowFindUs/style";
+} from "./style";
 import Loader from "@/components/Loader";
 
 const HowFindUs: FC = () => {

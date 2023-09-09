@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { Container, Block, Circular, Img } from "@/components/Loader/style";
+import { Container, Block, Circular, Img } from "./style";
 import IMGLoad from "public/load.png";
 
 const arrLoad = [0, 1, 2, 3, 4];
