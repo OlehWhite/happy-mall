@@ -6,7 +6,6 @@ import {
   WrapperInfo,
   Title,
   Button,
-  // Loaders,
 } from "@/components/HowFindUs/style";
 import Loader from "@/components/Loader";
 
