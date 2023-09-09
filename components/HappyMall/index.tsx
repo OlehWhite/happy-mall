@@ -54,7 +54,7 @@ const HappyMall: FC = () => {
         <WrapperSmallImg>
           <ImgSmall
             src="small-happy.png"
-            atl="Small happy"
+            alt="Small happy"
             title="Small happy"
           />
         </WrapperSmallImg>
