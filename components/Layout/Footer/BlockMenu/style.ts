@@ -5,8 +5,7 @@ export const Container = styled("div")(() => {
   return {
     display: "flex",
     flexDirection: "column",
-    width: 193,
-    marginLeft: 95,
+    width: 230,
   };
 });
 

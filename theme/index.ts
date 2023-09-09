@@ -18,8 +18,8 @@ export const theme = createTheme({
       primary: "#FDFCFA",
       secondary: "#C9C7C2",
       tertiary: "#C6A687",
-      contrastText: "rgba(30, 30, 33, 1)",
-      hover: "rgba(175, 139, 104, 1)",
+      contrastText: "#1E1E21",
+      hover: "#AF8B68",
     },
     // background: {
     //   paper: "",

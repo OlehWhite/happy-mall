@@ -2,7 +2,9 @@ import { styled } from "@mui/material";
 import { theme } from "@/theme";
 
 export const Container = styled("div")(() => {
-  return {};
+  return {
+    marginRight: 95,
+  };
 });
 
 export const Title = styled("div")(() => {

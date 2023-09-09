@@ -30,7 +30,6 @@ export const WrapperInfo = styled("div")(() => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    height: "92vh",
   };
 });
 
