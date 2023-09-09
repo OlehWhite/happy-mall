@@ -30,11 +30,7 @@ const HappyMall: FC = () => {
             height="16"
             viewBox="0 0 12 14"
             style={{ transition: ".3s" }}
-            fill={
-              isHovered
-                ? theme.palette.text.tertiary
-                : theme.palette.text.primary
-            }
+            fill={isHovered ? "#C6A687" : "#FDFCFA"}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M12 7L-6.52533e-07 13.9282L-4.68497e-08 0.0717964L12 7Z" />
