@@ -33,7 +33,7 @@ const settings = {
 
 const MainAnnouncements: FC = () => {
   const ref = useRef<Slider | null>(null);
-  const [activeBtn, setActiveBtn] = useState<number>(0);
+  const [activeBtn, setActiveBtn] = useState<any>(0);
   const [sortEvents, setSortEvents] = useState<string>("ВСЕ АНОНСЫ");
 
   const handleButtonClick = (index: number, event: string): void => {
