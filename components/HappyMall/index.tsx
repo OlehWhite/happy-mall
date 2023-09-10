@@ -12,7 +12,6 @@ import {
   WrapperPlay,
 } from "./style";
 import MapMall from "@/components/LanduageAndMapMall/MapMall";
-import { theme } from "@/theme";
 
 const HappyMall: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
