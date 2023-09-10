@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -9,7 +9,7 @@ import Head from "next/head";
 
 const theme = createTheme({});
 
-const MyApp: FC = ({ Component, pageProps }: AppProps) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -24,6 +24,6 @@ const MyApp: FC = ({ Component, pageProps }: AppProps) => {
       </Layout>
     </>
   );
-};
+}
 
 export default MyApp;
