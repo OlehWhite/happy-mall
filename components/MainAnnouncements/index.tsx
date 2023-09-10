@@ -36,7 +36,7 @@ const MainAnnouncements: FC = () => {
   const [activeBtn, setActiveBtn] = useState<number>(0);
   const [sortEvents, setSortEvents] = useState<string>("ВСЕ АНОНСЫ");
 
-  const handleButtonClick = (index, event) => {
+  const handleButtonClick = (index: number, event: string) => {
     setActiveBtn(index);
     setSortEvents(event);
   };
