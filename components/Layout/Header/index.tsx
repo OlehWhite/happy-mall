@@ -7,7 +7,7 @@ import Nav from "@/components/Nav";
 const Header: FC = () => {
   return (
     <HeaderBlock>
-      <Logo currentWidth={84} />
+      <Logo />
       <Nav />
       <LanguageAndMapMall />
     </HeaderBlock>
