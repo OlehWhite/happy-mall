@@ -18,9 +18,9 @@ export const Img = styled("img")(() => {
   return {};
 });
 
-export const Text = styled("text")(({ theme }) => {
+export const Text = styled("text")(() => {
   return {
-    color: theme.palette.text.tertiary,
+    color: "#C6A687",
     fontWeight: 500,
   };
 });

@@ -6,9 +6,9 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Title = styled("div")(({ theme }) => {
+export const Title = styled("div")(() => {
   return {
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
     marginBottom: 16,
   };
 });
@@ -19,13 +19,13 @@ export const Form = styled("form")(() => {
   };
 });
 
-export const Input = styled("input")(({ theme }) => {
+export const Input = styled("input")(() => {
   return {
-    border: `1px solid ${theme.palette.primary.light}`,
+    border: `1px solid #494843`,
     backgroundColor: "#ffffff00",
     height: 45,
     width: 258,
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
     marginRight: 8,
     paddingLeft: 16,
     marginBottom: 39,
@@ -35,22 +35,22 @@ export const Input = styled("input")(({ theme }) => {
     },
 
     "::placeholder": {
-      color: theme.palette.text.primary,
+      color: "#FDFCFA",
     },
   };
 });
 
-export const Button = styled("button")(({ theme }) => {
+export const Button = styled("button")(() => {
   return {
     width: 48,
     height: 48,
     border: 0,
-    backgroundColor: theme.palette.text.tertiary,
+    backgroundColor: "#C6A687",
     transition: ".3s",
     cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: theme.palette.text.hover,
+      backgroundColor: "#AF8B68",
     },
   };
 });
@@ -68,11 +68,11 @@ export const Block = styled("div")(() => {
   };
 });
 
-export const Text = styled("h2")(({ theme }) => {
+export const Text = styled("h2")(() => {
   return {
     fontWeight: 400,
     fontSize: 16,
-    color: theme.palette.primary.contrastText,
+    color: "#C9C7C2",
     margin: 0,
     marginLeft: 18,
   };

@@ -14,7 +14,7 @@ export const Li = styled("li")(({ theme }) => {
     fontSize: 16,
     lineHeight: "16px",
     letterSpacing: "1%",
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
     cursor: "pointer",
     transition: ".3s",
 

@@ -7,10 +7,10 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Select = styled("select")(({ theme }) => {
+export const Select = styled("select")(() => {
   return {
     backgroundColor: "#ffffff00",
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
     cursor: "pointer",
     border: 0,
   };

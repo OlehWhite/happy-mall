@@ -31,17 +31,17 @@ export const WrapperInfo = styled("div")(() => {
   };
 });
 
-export const Title = styled("h1")(({ theme }) => {
+export const Title = styled("h1")(() => {
   return {
     marginTop: 326,
     fontSize: 64,
     fontWeight: 500,
     lineHeight: "115%",
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
   };
 });
 
-export const Button = styled("button")(({ theme }) => {
+export const Button = styled("button")(() => {
   return {
     zIndex: 1,
     width: 166,
@@ -49,12 +49,12 @@ export const Button = styled("button")(({ theme }) => {
     padding: "12px 28px 14px 28px",
     border: 0,
     fontSize: 16,
-    color: theme.palette.text.contrastText,
+    color: "#1E1E21",
     cursor: "pointer",
     transition: ".3s",
 
     "&:hover": {
-      backgroundColor: theme.palette.text.hover,
+      backgroundColor: "#AF8B68",
     },
   };
 });

@@ -8,18 +8,18 @@ export const Container = styled("div")(() => {
   };
 });
 
-export const Link = styled("a")(({ theme }) => {
+export const Link = styled("a")(() => {
   return {
     fontSize: 16,
     fontWeight: 400,
     lineHeight: "20px",
     marginBottom: 18,
-    color: theme.palette.primary.contrastText,
+    color: "#C9C7C2",
     cursor: "pointer",
     transition: ".3s",
 
     "&:hover": {
-      color: theme.palette.text.hover,
+      color: "#AF8B68",
     },
   };
 });

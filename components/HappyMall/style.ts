@@ -30,7 +30,7 @@ export const Img = styled("img")(() => {
   };
 });
 
-export const WrapperPlay = styled("div")(({ theme }) => {
+export const WrapperPlay = styled("div")(() => {
   return {
     position: "absolute",
     top: "50%",
@@ -38,7 +38,7 @@ export const WrapperPlay = styled("div")(({ theme }) => {
     transform: "translate(-50%, -50%)",
     zIndex: 1,
     display: "flex",
-    border: `2px solid ${theme.palette.primary.contrastText}`,
+    border: `2px solid #C9C7C2`,
     height: 72,
     width: 72,
     justifyContent: "center",
@@ -61,29 +61,29 @@ export const WrapperAboutMall = styled("div")(() => {
   };
 });
 
-export const Title = styled("h1")(({ theme }) => {
+export const Title = styled("h1")(() => {
   return {
     fontSize: 52,
     lineHeight: "63px",
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
     margin: 0,
   };
 });
 
-export const Line = styled("hr")(({ theme }) => {
+export const Line = styled("hr")(() => {
   return {
     width: 195,
-    borderColor: theme.palette.text.tertiary,
+    borderColor: "#FDFCFA",
     margin: "40px 0 32px 0",
   };
 });
 
-export const Text = styled("p")(({ theme }) => {
+export const Text = styled("p")(() => {
   return {
     fontSize: 16,
     fontWeight: 400,
     lineHeight: "28px",
-    color: theme.palette.primary.contrastText,
+    color: "#C9C7C2",
     marginBottom: 44,
   };
 });

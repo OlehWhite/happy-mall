@@ -17,12 +17,12 @@ export const Img = styled("img")(() => {
   return {};
 });
 
-export const WrapperImg = styled("div")(({ theme }) => {
+export const WrapperImg = styled("div")(() => {
   return {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.palette.text.tertiary,
+    backgroundColor: "#C6A687",
     marginRight: 8,
     width: 40,
     height: 40,
@@ -31,7 +31,7 @@ export const WrapperImg = styled("div")(({ theme }) => {
     cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: theme.palette.text.hover,
+      backgroundColor: "#AF8B68",
     },
   };
 });
@@ -41,7 +41,7 @@ export const PrivacyPolicy = styled("div")(({ theme }) => {
     fontSize: 16,
     fontWeight: 400,
     lineHeight: "20px",
-    color: theme.palette.primary.contrastText,
+    color: "#C9C7C2",
     marginTop: 156,
   };
 });
@@ -56,9 +56,9 @@ export const Text = styled("p")(() => {
   return { marginRight: 20, margin: "8px 0" };
 });
 
-export const B = styled("span")(({ theme }) => {
+export const B = styled("span")(() => {
   return {
-    color: theme.palette.text.primary,
+    color: "#FDFCFA",
   };
 });
 

@@ -26,9 +26,9 @@ export const Img = styled("img")(() => {
   };
 });
 
-export const Circular = styled(CircularProgress)(({ theme }) => {
+export const Circular = styled(CircularProgress)(() => {
   return {
-    color: theme.palette.text.tertiary,
+    color: "#C6A687",
     "& .MuiCircularProgress-svg": {
       transform: "scale(1.5)",
     },
