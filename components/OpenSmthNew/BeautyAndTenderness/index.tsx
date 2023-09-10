@@ -74,11 +74,7 @@ const BeautyAndTenderness: FC = () => {
               </MoreBrands>
             </Box>
             <Cards>
-              <Slider
-                style={{ width: 1600, padding: "0 20px" }}
-                ref={ref}
-                {...settings}
-              >
+              <Slider className="custom-slider" ref={ref} {...settings}>
                 {CARDS_DATA.map((card, index) => (
                   <Card key={index}>
                     <ImgCad
