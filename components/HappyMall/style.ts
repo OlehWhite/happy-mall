@@ -7,8 +7,8 @@ export const Container = styled("div")(() => {
     width: "100%",
     maxWidth: 1920,
     padding: "0 120px",
-    marginTop: 140,
     boxSizing: "border-box",
+    margin: "140px auto 0",
   };
 });
 
@@ -16,7 +16,6 @@ export const WrapperImg = styled("div")(() => {
   return {
     position: "relative",
     maxWidth: 834,
-    margin: "0 auto",
     height: "100%",
   };
 });
@@ -73,7 +72,7 @@ export const Title = styled("h1")(() => {
 export const Line = styled("hr")(() => {
   return {
     width: 195,
-    borderColor: "#FDFCFA",
+    borderColor: "#C6A687",
     margin: "40px 0 32px 0",
   };
 });

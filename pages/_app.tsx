@@ -6,6 +6,8 @@ import Layout from "@/components/Layout";
 import { AppProps } from "next/app";
 import "/styles/global.css";
 import Head from "next/head";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const theme = createTheme({});
 
