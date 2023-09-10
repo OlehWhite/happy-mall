@@ -10,8 +10,9 @@ import {
   WrapperSmallImg,
   ImgSmall,
   WrapperPlay,
+  WrapperReadMore,
+  TextSmall,
 } from "./style";
-import MapMall from "@/components/LanduageAndMapMall/MapMall";
 
 const HappyMall: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -49,7 +50,10 @@ const HappyMall: FC = () => {
           с более чем 250 брендов, зону с товарами Home, lifestyle & beauty со
           всеми включенными услугами
         </Text>
-        <MapMall />
+        <WrapperReadMore>
+          <ImgSmall src="icon.png" alt="Read more" title="Read more" />
+          <TextSmall>ЧИТАТЬ БОЛЬШЕ</TextSmall>
+        </WrapperReadMore>
         <WrapperSmallImg>
           <ImgSmall
             src="small-happy.png"

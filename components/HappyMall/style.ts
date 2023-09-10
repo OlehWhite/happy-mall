@@ -8,7 +8,7 @@ export const Container = styled("div")(() => {
     maxWidth: 1920,
     padding: "0 120px",
     boxSizing: "border-box",
-    margin: "140px auto 0",
+    margin: "190px auto 0",
   };
 });
 
@@ -95,6 +95,25 @@ export const WrapperSmallImg = styled("div")(() => {
   };
 });
 
+export const WrapperReadMore = styled("div")(() => {
+  return {
+    display: "flex",
+    alignItems: "center",
+  };
+});
+
 export const ImgSmall = styled("img")(() => {
-  return {};
+  return {
+    marginRight: 8,
+  };
+});
+
+export const TextSmall = styled("p")(() => {
+  return {
+    margin: 0,
+    paddingTop: 4,
+    fontSize: 16,
+    fontWeight: 500,
+    color: "#C6A687",
+  };
 });

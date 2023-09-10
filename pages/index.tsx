@@ -3,6 +3,7 @@ import HowFindUs from "@/components/HowFindUs";
 import HappyMall from "@/components/HappyMall";
 import OpenSmthNew from "@/components/OpenSmthNew";
 import MainAnnouncements from "@/components/MainAnnouncements";
+import FollowUs from "@/components/FollowUs";
 
 const Home: FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: FC = () => {
       <HappyMall />
       <OpenSmthNew />
       <MainAnnouncements />
+      <FollowUs />
     </>
   );
 };

@@ -12,6 +12,7 @@ export const WrapperImg = styled("div")(() => {
     overflow: "hidden",
     height: 880,
     width: "100%",
+    marginTop: 75,
   };
 });
 
