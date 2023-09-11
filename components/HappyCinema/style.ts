@@ -9,6 +9,7 @@ export const Container = styled("div")(() => {
     maxWidth: 1920,
     padding: "0 120px 0 120px",
     boxSizing: "border-box",
+    margin: "0 auto",
     marginTop: 140,
   };
 });
@@ -40,6 +41,7 @@ export const WrapperLink = styled("div")(() => {
     display: "flex",
     justifyContent: "center",
     marginTop: 58,
+    cursor: "pointer",
   };
 });
 

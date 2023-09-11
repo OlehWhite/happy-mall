@@ -6,6 +6,7 @@ import MainAnnouncements from "@/components/MainAnnouncements";
 import FollowUs from "@/components/FollowUs";
 import HappyCinema from "@/components/HappyCinema";
 import Adventica from "@/components/Adventica";
+import OurContacts from "@/components/OurContacts";
 
 const Home: FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: FC = () => {
       <FollowUs />
       <HappyCinema />
       <Adventica />
+      <OurContacts />
     </>
   );
 };
