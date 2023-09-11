@@ -16,11 +16,18 @@ export const WrapperBackground = styled("div")(() => {
   return {};
 });
 
+export const GlobalContainer = styled("div")(() => {
+  return {
+    position: "relative",
+  };
+});
+
 export const Background = styled("img")(() => {
   return {
     position: "absolute",
     top: -371,
     zIndex: -1,
+    width: "100%",
   };
 });
 

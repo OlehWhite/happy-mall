@@ -36,5 +36,12 @@ export const Background = styled("img")(() => {
     position: "absolute",
     zIndex: -1,
     maxHeight: 1081,
+    width: "100%",
+  };
+});
+
+export const GlobalContainer = styled("div")(() => {
+  return {
+    position: "relative",
   };
 });

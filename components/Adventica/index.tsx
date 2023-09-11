@@ -19,6 +19,7 @@ import {
   WrapperInfoBlock,
   Text,
   Line,
+  GlobalContainer,
 } from "./style";
 import { BLOCKS, DATA } from "@/components/Adventica/data";
 import Slider from "react-slick";
@@ -55,7 +56,7 @@ const Adventica: FC = () => {
   };
 
   return (
-    <Container>
+    <GlobalContainer>
       <WrapperBackground>
         <Background
           src="background-2.png"
@@ -63,55 +64,57 @@ const Adventica: FC = () => {
           title="Background"
         />
       </WrapperBackground>
-      <WrapperLogo>
-        <Logo src="adventica.png" alt="Adventica" title="Adventica" />
-        <Title>Центр для всей семьи</Title>
-      </WrapperLogo>
-      <Wrapper>
-        {DATA.map((menu, index) => (
-          <Wrapper key={index}>
-            <Menu
-              onClick={() => handleButtonClick(index, menu.title)}
-              active={activeBtn === index}
-            >
-              {menu.title}
-            </Menu>
-            {index < DATA.length - 1 && (
-              <Img src="load.png" alt="Load" title="Load" />
-            )}
-          </Wrapper>
-        ))}
-      </Wrapper>
-      <Box>
-        <WrapperLeft>
-          <ButtonLeft onClick={onPrev}>
-            <Img src="left.png" alt="Arrow left" title="Arrow left" />
-          </ButtonLeft>
-        </WrapperLeft>
-        <CustomSlider ref={ref} {...settings}>
-          {BLOCKS.map((img, index) => (
-            <WrapperImage key={index}>
-              <Img src={img.img} alt={img.title} title={img.title} />
-            </WrapperImage>
+      <Container>
+        <WrapperLogo>
+          <Logo src="adventica.png" alt="Adventica" title="Adventica" />
+          <Title>Центр для всей семьи</Title>
+        </WrapperLogo>
+        <Wrapper>
+          {DATA.map((menu, index) => (
+            <Wrapper key={index}>
+              <Menu
+                onClick={() => handleButtonClick(index, menu.title)}
+                active={activeBtn === index}
+              >
+                {menu.title}
+              </Menu>
+              {index < DATA.length - 1 && (
+                <Img src="load.png" alt="Load" title="Load" />
+              )}
+            </Wrapper>
           ))}
-        </CustomSlider>
-        <WrapperRight>
-          <ButtonRight onClick={onNext}>
-            <Img src="right.png" alt="Arrow right" title="Arrow right" />
-          </ButtonRight>
-        </WrapperRight>
-      </Box>
-      {DATA.map(
-        (block, index) =>
-          sortEvents === block.title && (
-            <WrapperInfoBlock key={index}>
-              <TitleInfo>{block.title}</TitleInfo>
-              <Line />
-              <Text>{block.text}</Text>
-            </WrapperInfoBlock>
-          )
-      )}
-    </Container>
+        </Wrapper>
+        <Box>
+          <WrapperLeft>
+            <ButtonLeft onClick={onPrev}>
+              <Img src="left.png" alt="Arrow left" title="Arrow left" />
+            </ButtonLeft>
+          </WrapperLeft>
+          <CustomSlider ref={ref} {...settings}>
+            {BLOCKS.map((img, index) => (
+              <WrapperImage key={index}>
+                <Img src={img.img} alt={img.title} title={img.title} />
+              </WrapperImage>
+            ))}
+          </CustomSlider>
+          <WrapperRight>
+            <ButtonRight onClick={onNext}>
+              <Img src="right.png" alt="Arrow right" title="Arrow right" />
+            </ButtonRight>
+          </WrapperRight>
+        </Box>
+        {DATA.map(
+          (block, index) =>
+            sortEvents === block.title && (
+              <WrapperInfoBlock key={index}>
+                <TitleInfo>{block.title}</TitleInfo>
+                <Line />
+                <Text>{block.text}</Text>
+              </WrapperInfoBlock>
+            )
+        )}
+      </Container>
+    </GlobalContainer>
   );
 };
 
