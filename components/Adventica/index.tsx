@@ -10,6 +10,7 @@ import {
   Menu,
   Img,
   WrapperImage,
+  CustomSlider,
   ButtonLeft,
   ButtonRight,
   WrapperLeft,
@@ -22,7 +23,6 @@ import {
 import { BLOCKS, DATA } from "@/components/Adventica/data";
 import Slider from "react-slick";
 import { Box } from "@mui/system";
-import { styled } from "@mui/material";
 
 const settings = {
   dots: false,
@@ -31,36 +31,10 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   centerMode: true,
-  centerPadding: -10,
+  centerPadding: "-10",
   swipe: false,
   arrows: false,
 };
-
-const CustomSlider = styled(Slider)(() => ({
-  ".slick-slide": {
-    position: "relative",
-    transition: "transform 0.3s ease",
-    zIndex: 1,
-    marginRight: -2,
-  },
-
-  ".slick-list": {
-    height: 570,
-    paddingTop: "168px !important",
-  },
-
-  ".slick-slide.slick-center": {
-    position: "relative",
-    left: -110,
-    zIndex: 10,
-    transform: "scale(1.6)",
-  },
-
-  ".slick-slide:not(.slick-center)": {
-    transform: "scale(0.97)",
-    transition: "transform 0.3s ease",
-  },
-}));
 
 const Adventica: FC = () => {
   const [activeBtn, setActiveBtn] = useState<number>(0);
