@@ -162,7 +162,7 @@ export const WrapperRight = styled("div")(() => {
   };
 });
 
-export const Menu = styled("button")(({ active }: { active: number }) => {
+export const Menu = styled("button")(({ active }: { active: boolean }) => {
   return {
     margin: "0 16px",
     fontSize: 14,
