@@ -12,3 +12,12 @@ body {
 .custom-slider-main-anons {
     width: 1680px;
 }
+
+.custom-slider-movies {
+    width: 1680px;
+    padding: 2px
+}
+
+.active {
+    z-index: 2; /* Вищий z-index для активного елемента */
+}

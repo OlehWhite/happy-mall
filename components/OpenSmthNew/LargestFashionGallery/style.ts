@@ -56,9 +56,7 @@ export const Button = styled("button")(({ active }: { active: boolean }) => {
     cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: "#AF8B68",
-      color: "#1E1E21",
-      border: "1px solid ",
+      border: "1px solid #AF8B68",
     },
   };
 });

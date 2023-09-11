@@ -12,6 +12,6 @@ export const HeaderBlock = styled("header")(() => {
     margin: "0 auto",
     padding: "0 32px",
     boxSizing: "border-box",
-    zIndex: 11,
+    zIndex: 100,
   };
 });

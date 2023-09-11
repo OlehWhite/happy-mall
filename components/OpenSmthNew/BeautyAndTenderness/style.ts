@@ -1,6 +1,4 @@
 import { styled } from "@mui/material";
-import excludeVariablesFromRoot from "@mui/material/styles/excludeVariablesFromRoot";
-import { maxWidth } from "@mui/system";
 
 export const Container = styled("div")(() => {
   return {
@@ -58,9 +56,7 @@ export const Button = styled("button")(({ active }: { active: boolean }) => {
     cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: "#AF8B68",
-      color: "#1E1E21",
-      border: "1px solid ",
+      border: "1px solid #C6A687",
     },
   };
 });

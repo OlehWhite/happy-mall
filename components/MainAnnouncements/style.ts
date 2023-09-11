@@ -28,26 +28,6 @@ export const Title = styled("h2")(() => {
   };
 });
 
-export const Menu = styled("button")(({ active }: { active: boolean }) => {
-  return {
-    margin: "0 16px",
-    fontSize: 14,
-    fontWeight: 400,
-    color: active ? "#C6A687" : "#FDFCFA",
-    backgroundColor: "#ffffff00",
-    border: 0,
-    borderBottom: `2px solid ${active ? "#C6A687" : "#ffffff00"}`,
-    cursor: "pointer",
-    transition: ".3s",
-    paddingBottom: 20,
-
-    "&:hover": {
-      color: "#AF8B68",
-      borderBottom: "2px solid #C6A687",
-    },
-  };
-});
-
 export const Info = styled("div")(() => {
   return {
     cursor: "pointer",
@@ -179,5 +159,25 @@ export const WrapperRight = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+  };
+});
+
+export const Menu = styled("button")(({ active }: { active: number }) => {
+  return {
+    margin: "0 16px",
+    fontSize: 14,
+    fontWeight: 400,
+    color: active ? "#C6A687" : "#FDFCFA",
+    backgroundColor: "#ffffff00",
+    border: 0,
+    borderBottom: `2px solid ${active ? "#C6A687" : "#ffffff00"}`,
+    cursor: "pointer",
+    transition: ".3s",
+    paddingBottom: 20,
+
+    "&:hover": {
+      color: "#AF8B68",
+      borderBottom: "2px solid #C6A687",
+    },
   };
 });

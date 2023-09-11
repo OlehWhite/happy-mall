@@ -4,6 +4,8 @@ import HappyMall from "@/components/HappyMall";
 import OpenSmthNew from "@/components/OpenSmthNew";
 import MainAnnouncements from "@/components/MainAnnouncements";
 import FollowUs from "@/components/FollowUs";
+import HappyCinema from "@/components/HappyCinema";
+import Adventica from "@/components/Adventica";
 
 const Home: FC = () => {
   return (
@@ -13,6 +15,8 @@ const Home: FC = () => {
       <OpenSmthNew />
       <MainAnnouncements />
       <FollowUs />
+      <HappyCinema />
+      <Adventica />
     </>
   );
 };
