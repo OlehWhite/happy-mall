@@ -25,7 +25,7 @@ const OurContacts: FC = () => {
         <Line />
         <WrapperOurContacts>
           {DATA_OUR_CONT.map((contact, index) => (
-            <Block>
+            <Block key={index}>
               <Img
                 src={contact.img}
                 alt={contact.title}
@@ -40,7 +40,7 @@ const OurContacts: FC = () => {
           <Line />
           <WrapperHowToArrive>
             {DATA_HOW_TO_ARR.map((contact, index) => (
-              <Block>
+              <Block key={index}>
                 <Img
                   src={contact.img}
                   alt={contact.title}
