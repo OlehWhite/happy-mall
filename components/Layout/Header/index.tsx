@@ -1,16 +1,18 @@
 import { FC } from "react";
 import LanguageAndMapMall from "@/components/LanduageAndMapMall";
-import { HeaderBlock } from "./style";
+import { HeaderBlock, Container } from "./style";
 import Logo from "@/components/Logo";
 import Nav from "@/components/Nav";
 
 const Header: FC = () => {
   return (
-    <HeaderBlock>
-      <Logo />
-      <Nav />
-      <LanguageAndMapMall />
-    </HeaderBlock>
+    <Container style={{}}>
+      <HeaderBlock>
+        <Logo />
+        <Nav />
+        <LanguageAndMapMall />
+      </HeaderBlock>
+    </Container>
   );
 };
 

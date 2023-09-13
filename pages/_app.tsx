@@ -8,6 +8,8 @@ import "/styles/global.css";
 import Head from "next/head";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n";
 
 const theme = createTheme({});
 
@@ -17,13 +19,15 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Happy Mall</title>
       </Head>
-      <Layout>
-        <Header />
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-        <Footer />
-      </Layout>
+      <I18nextProvider i18n={i18n}>
+        <Layout>
+          <Header />
+          <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </ThemeProvider>
+          <Footer />
+        </Layout>
+      </I18nextProvider>
     </>
   );
 }

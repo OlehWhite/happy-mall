@@ -12,7 +12,6 @@ import {
   Text,
   WrapperTitle,
   AllAnons,
-  TextAnons,
   ButtonLeft,
   ButtonRight,
   WrapperLeft,
@@ -20,6 +19,7 @@ import {
 } from "./style";
 import { BLOCKS, MENUS } from "@/components/MainAnnouncements/menu";
 import Slider from "react-slick";
+import AnimationLink from "@/components/AnimationLink";
 
 const settings = {
   dots: false,
@@ -95,8 +95,7 @@ const MainAnnouncements: FC = () => {
         </WrapperRight>
       </WrapperInfos>
       <AllAnons>
-        <Img src="icon.png" alt="Icon" title="Icon" />
-        <TextAnons>ВСЕ АНОНСЫ</TextAnons>
+        <AnimationLink text={"ВСЕ АНОНСЫ"} />
       </AllAnons>
     </Container>
   );

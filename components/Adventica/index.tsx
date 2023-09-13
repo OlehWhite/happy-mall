@@ -33,7 +33,7 @@ const settings = {
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: "-10",
-  swipe: false,
+  swipe: true,
   arrows: false,
 };
 

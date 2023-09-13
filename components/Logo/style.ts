@@ -5,6 +5,7 @@ export const Container = styled("div")(() => {
     display: "flex",
     alignItems: "center",
     height: 72,
+    marginRight: 100,
   };
 });
 

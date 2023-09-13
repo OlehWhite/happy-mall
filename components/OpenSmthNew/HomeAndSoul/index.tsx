@@ -18,6 +18,7 @@ import {
 import { BTNS } from "./btns";
 import { CARDS_DATA } from "@/components/OpenSmthNew/HomeAndSoul/cands";
 import Slider from "react-slick";
+import AnimationLink from "@/components/AnimationLink";
 
 const settings = {
   dots: false,
@@ -68,10 +69,7 @@ const HomeAndSoul: FC = () => {
                   </Button>
                 ))}
               </Box>
-              <MoreBrands>
-                <Img src="icon.png" alt="Icon" title="Icon" />
-                <Text>БОЛЬШЕ БРЕНДОВ</Text>
-              </MoreBrands>
+              <AnimationLink text={"БОЛЬШЕ БРЕНДОВ"} />
             </Box>
             <Cards>
               <Slider className="custom-slider" ref={ref} {...settings}>

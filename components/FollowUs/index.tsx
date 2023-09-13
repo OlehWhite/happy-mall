@@ -20,9 +20,14 @@ import {
   WrapperSmall,
 } from "./style";
 import { LINKS } from "@/components/FollowUs/links";
+import ModalVideo from "@/components/ModalVideo";
 
 const FollowUs: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
+
+  const handleOpen = () => setOpenModalWindow(true);
+  const handleClose = () => setOpenModalWindow(false);
 
   return (
     <Container>
@@ -31,6 +36,7 @@ const FollowUs: FC = () => {
         <WrapperPlay
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onClick={handleOpen}
         >
           <svg
             width="16"
@@ -54,7 +60,7 @@ const FollowUs: FC = () => {
         <BlockLinks>
           {LINKS.map((link, index) => (
             <Block key={index}>
-              <Wrapper>
+              <Wrapper href={link.link} target="_blank">
                 <Img src={link.logo} alt={link.title} title={link.title} />
               </Wrapper>
               <WrapperInfo>
@@ -74,6 +80,11 @@ const FollowUs: FC = () => {
           ))}
         </BlockLinks>
       </BlockInfo>
+      <ModalVideo
+        openModalWindow={openModalWindow}
+        onClose={handleClose}
+        videoId={"C7bxc0WRt8U"}
+      />
     </Container>
   );
 };

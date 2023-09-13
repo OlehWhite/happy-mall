@@ -4,8 +4,6 @@ import { CircularProgress } from "@mui/material";
 export const Container = styled("div")(() => {
   return {
     position: "relative",
-    display: "flex",
-    justifyContent: "center",
   };
 });
 
@@ -15,15 +13,17 @@ export const WrapperBlocks = styled("div")(() => {
     minHeight: 660,
     alignItems: "flex-end",
     zIndex: 15,
+    margin: "0 auto",
+    paddingLeft: 11,
   };
 });
 
 export const WrapperPlay = styled("div")(() => {
   return {
     position: "absolute",
-    top: "50%",
+    top: 0,
     left: "50%",
-    transform: "translate(-50%, -39%)",
+    transform: "translate(-50%, 400%)",
     display: "flex",
     border: `2px solid #C9C7C2`,
     height: 72,
@@ -44,14 +44,18 @@ export const WrapperPlay = styled("div")(() => {
 export const Wrapper = styled("div")(() => {
   return {
     position: "absolute",
+    top: 0,
     display: "flex",
-    zIndex: -5,
+    flexDirection: "column",
+    zIndex: 25,
+    width: "100%",
   };
 });
 
 export const WrapperImg = styled("div")(() => {
   return {
     zIndex: 16,
+    margin: "0 auto",
   };
 });
 

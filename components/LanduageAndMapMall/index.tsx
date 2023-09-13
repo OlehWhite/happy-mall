@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { Container } from "./style";
 import Language from "@/components/LanduageAndMapMall/Language";
-import MapMall from "@/components/LanduageAndMapMall/MapMall";
+import AnimationLink from "@/components/AnimationLink";
 
 const LanguageAndMapMall: FC = () => {
   return (
     <Container>
       <Language />
-      <MapMall />
+      <AnimationLink text={"КАРТА МОЛЛА"} />
     </Container>
   );
 };

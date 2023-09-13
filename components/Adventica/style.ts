@@ -129,7 +129,7 @@ export const ButtonLeft = styled("div")(() => {
     width: 48,
     height: 48,
     backdropFilter: "blur(5px)",
-    left: -60,
+    left: -211,
     transition: ".3s",
 
     "&:hover": {
@@ -148,7 +148,7 @@ export const ButtonRight = styled("div")(() => {
     width: 48,
     height: 48,
     backdropFilter: "blur(5px)",
-    right: -60,
+    right: -211,
     transition: ".3s",
 
     "&:hover": {
@@ -217,5 +217,7 @@ export const Text = styled("p")(() => {
     fontWeight: 400,
     color: "#494843",
     padding: "0 0 24px 24px",
+    width: "100%",
+    maxWidth: 500,
   };
 });

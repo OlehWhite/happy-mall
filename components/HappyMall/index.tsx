@@ -12,10 +12,18 @@ import {
   WrapperPlay,
   WrapperReadMore,
   TextSmall,
+  ImgAboutCircle,
+  ImgAboutArrow,
+  WrapperAnimationBnt,
 } from "./style";
+import ModalVideo from "@/components/ModalVideo";
 
 const HappyMall: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
+
+  const handleOpen = () => setOpenModalWindow(true);
+  const handleClose = () => setOpenModalWindow(false);
 
   return (
     <Container>
@@ -24,6 +32,7 @@ const HappyMall: FC = () => {
         <WrapperPlay
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onClick={handleOpen}
         >
           <svg
             width="16"
@@ -50,9 +59,22 @@ const HappyMall: FC = () => {
           с более чем 250 брендов, зону с товарами Home, lifestyle & beauty со
           всеми включенными услугами
         </Text>
-        <WrapperReadMore>
-          <ImgSmall src="icon.png" alt="Read more" title="Read more" />
-          <TextSmall>ЧИТАТЬ БОЛЬШЕ</TextSmall>
+        <WrapperReadMore id="wrapperReadMore">
+          <WrapperAnimationBnt>
+            <ImgAboutCircle
+              src="circle.png"
+              alt="Read more"
+              title="Read more"
+            />
+            <ImgAboutArrow
+              id="wrapperReadMoreImgAboutArrow"
+              src="vertical-egle.png"
+              alt="Read more"
+              title="Read more"
+            />
+          </WrapperAnimationBnt>
+
+          <TextSmall id="wrapperReadMoreTextSmall">ЧИТАТЬ БОЛЬШЕ</TextSmall>
         </WrapperReadMore>
         <WrapperSmallImg>
           <ImgSmall
@@ -62,6 +84,11 @@ const HappyMall: FC = () => {
           />
         </WrapperSmallImg>
       </WrapperAboutMall>
+      <ModalVideo
+        openModalWindow={openModalWindow}
+        onClose={handleClose}
+        videoId={"C7bxc0WRt8U"}
+      />
     </Container>
   );
 };

@@ -45,15 +45,6 @@ export const WrapperLink = styled("div")(() => {
   };
 });
 
-export const Link = styled("div")(() => {
-  return {
-    fontSize: 16,
-    fontWeight: 500,
-    color: "#C6A687",
-    margin: "5px 0 0 12px",
-  };
-});
-
 export const Img = styled("img")(() => {
   return {};
 });

@@ -10,7 +10,7 @@ import {
   Text,
   WrapperBlocks,
 } from "./style";
-import MapMall from "@/components/LanduageAndMapMall/MapMall";
+import AnimationLink from "@/components/AnimationLink";
 
 const BlockInfo: FC = () => {
   return (
@@ -40,7 +40,7 @@ const BlockInfo: FC = () => {
           <Text>happymall.info@gmail.com</Text>
         </Block>
       </WrapperBlocks>
-      <MapMall />
+      <AnimationLink text={"КАРТА МОЛЛА"} />
     </Container>
   );
 };

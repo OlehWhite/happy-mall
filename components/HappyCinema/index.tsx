@@ -1,15 +1,8 @@
 import { FC } from "react";
-import {
-  Container,
-  WrapperLogo,
-  Title,
-  Logo,
-  Link,
-  WrapperLink,
-  Img,
-} from "./style";
+import { Container, WrapperLogo, Title, Logo, WrapperLink } from "./style";
 import CinemasAndLoaders from "@/components/HappyCinema/CinemasAndLoaders";
 import Movies from "@/components/HappyCinema/Movies";
+import AnimationLink from "@/components/AnimationLink";
 
 const HappyCinema: FC = () => {
   return (
@@ -21,8 +14,7 @@ const HappyCinema: FC = () => {
       <CinemasAndLoaders />
       <Movies />
       <WrapperLink>
-        <Img src="icon.png" alt="Icon" title="Icon" />
-        <Link>ПЕРЕЙТИ НА САЙТ</Link>
+        <AnimationLink text={"ПЕРЕЙТИ НА САЙТ"} />
       </WrapperLink>
     </Container>
   );

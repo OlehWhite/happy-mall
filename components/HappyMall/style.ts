@@ -8,7 +8,7 @@ export const Container = styled("div")(() => {
     maxWidth: 1920,
     padding: "0 120px",
     boxSizing: "border-box",
-    margin: "190px auto 0",
+    margin: "140px auto 0",
   };
 });
 
@@ -99,6 +99,44 @@ export const WrapperReadMore = styled("div")(() => {
   return {
     display: "flex",
     alignItems: "center",
+    cursor: "pointer",
+    transition: "transform 0.3s",
+
+    "&:hover": {
+      "& #wrapperReadMoreImgAboutArrow": {
+        transform: "rotate(90deg)",
+      },
+
+      "& #wrapperReadMoreTextSmall": {
+        transition: "transform 0.3s",
+        transform: "translate(15px)",
+      },
+    },
+  };
+});
+
+export const WrapperAnimationBnt = styled("div")(() => {
+  return {
+    marginRight: 8,
+    position: "relative",
+    display: "flex",
+  };
+});
+
+export const ImgAboutCircle = styled("img")(() => {
+  return {};
+});
+
+export const ImgAboutArrow = styled("img")(() => {
+  return {
+    position: "absolute",
+    left: 11,
+    bottom: -2,
+    transition: "transform 0.3s",
+
+    "&:hover": {
+      transform: "rotate(90deg)",
+    },
   };
 });
 
@@ -111,9 +149,9 @@ export const ImgSmall = styled("img")(() => {
 export const TextSmall = styled("p")(() => {
   return {
     margin: 0,
-    paddingTop: 4,
     fontSize: 16,
     fontWeight: 500,
     color: "#C6A687",
+    transition: "transform 0.3s",
   };
 });

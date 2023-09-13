@@ -106,7 +106,7 @@ export const Block = styled("div")(() => {
   };
 });
 
-export const Wrapper = styled("div")(() => {
+export const Wrapper = styled("a")(() => {
   return {
     width: 52,
     height: 52,

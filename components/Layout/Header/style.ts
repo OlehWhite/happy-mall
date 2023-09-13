@@ -15,3 +15,9 @@ export const HeaderBlock = styled("header")(() => {
     zIndex: 100,
   };
 });
+
+export const Container = styled("header")(() => {
+  return {
+    paddingBottom: 72,
+  };
+});
