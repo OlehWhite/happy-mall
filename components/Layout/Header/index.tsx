@@ -6,7 +6,7 @@ import Nav from "@/components/Nav";
 
 const Header: FC = () => {
   return (
-    <Container style={{}}>
+    <Container>
       <HeaderBlock>
         <Logo />
         <Nav />

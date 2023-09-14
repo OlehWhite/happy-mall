@@ -10,15 +10,13 @@ import {
   WrapperSmallImg,
   ImgSmall,
   WrapperPlay,
-  WrapperReadMore,
-  TextSmall,
-  ImgAboutCircle,
-  ImgAboutArrow,
-  WrapperAnimationBnt,
 } from "./style";
 import ModalVideo from "@/components/ModalVideo";
+import { useTranslation } from "react-i18next";
+import AnimationLink from "@/components/AnimationLink";
 
 const HappyMall: FC = () => {
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
 
@@ -49,33 +47,12 @@ const HappyMall: FC = () => {
       <WrapperAboutMall>
         <Title>
           Happy Mall — <br />
-          крупнейший молл в <br />
-          Молдове
+          {t("happy-mall.title")}
         </Title>
         <Line />
-        <Text>
-          Торговый центр построен в соответствии с самыми высокими
-          международными стандартами качества. Здесь вы найдете Fashion Gallery
-          с более чем 250 брендов, зону с товарами Home, lifestyle & beauty со
-          всеми включенными услугами
-        </Text>
-        <WrapperReadMore id="wrapperReadMore">
-          <WrapperAnimationBnt>
-            <ImgAboutCircle
-              src="circle.png"
-              alt="Read more"
-              title="Read more"
-            />
-            <ImgAboutArrow
-              id="wrapperReadMoreImgAboutArrow"
-              src="vertical-egle.png"
-              alt="Read more"
-              title="Read more"
-            />
-          </WrapperAnimationBnt>
+        <Text>{t("happy-mall.text")}</Text>
+        <AnimationLink text={"read-more"} />
 
-          <TextSmall id="wrapperReadMoreTextSmall">ЧИТАТЬ БОЛЬШЕ</TextSmall>
-        </WrapperReadMore>
         <WrapperSmallImg>
           <ImgSmall
             src="small-happy.png"

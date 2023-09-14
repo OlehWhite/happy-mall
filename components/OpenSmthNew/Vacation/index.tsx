@@ -7,18 +7,16 @@ import {
   WrapperTitle,
   Button,
   WrapperBlock,
-  MoreBrands,
-  Text,
   Cards,
   Card,
   ImgCad,
   Name,
   Box,
 } from "./style";
-import { BTNS } from "./btns";
-import { CARDS_DATA } from "@/components/OpenSmthNew/HomeAndSoul/cands";
 import Slider from "react-slick";
 import AnimationLink from "@/components/AnimationLink";
+import { BTNS, CARDS_DATA } from "@/components/OpenSmthNew/data";
+import { useTranslation } from "react-i18next";
 
 const settings = {
   dots: false,
@@ -34,6 +32,7 @@ const Vacation: FC = () => {
   const ref = useRef<Slider | null>(null);
   const [switcher, setSwitcher] = useState<boolean>(false);
   const [activeButton, setActiveButton] = useState<number>(0);
+  const { t } = useTranslation();
 
   const clickChangeSwitcher = () => {
     setSwitcher((prevState) => !prevState);
@@ -47,7 +46,9 @@ const Vacation: FC = () => {
     <Container>
       <WrapperTitle>
         <Img src="load.png" alt="Load" title="Load" />
-        <Title onClick={clickChangeSwitcher}>Отдых</Title>
+        <Title onClick={clickChangeSwitcher}>
+          {t("open-smth-new.block-title-four")}
+        </Title>
         <Img
           src={switcher ? "arrow-down.png" : "arrow-up.png"}
           alt="Arrow up"
@@ -65,11 +66,11 @@ const Vacation: FC = () => {
                     onClick={() => handleButtonClick(index)}
                     active={activeButton === index}
                   >
-                    {btn}
+                    {t(btn)}
                   </Button>
                 ))}
               </Box>
-              <AnimationLink text={"БОЛЬШЕ БРЕНДОВ"} />
+              <AnimationLink text={"open-smth-new.more-brands"} />
             </Box>
             <Cards>
               <Slider className="custom-slider" ref={ref} {...settings}>

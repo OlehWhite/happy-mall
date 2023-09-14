@@ -7,7 +7,7 @@ const LanguageAndMapMall: FC = () => {
   return (
     <Container>
       <Language />
-      <AnimationLink text={"КАРТА МОЛЛА"} />
+      <AnimationLink text={"map-mall"} />
     </Container>
   );
 };

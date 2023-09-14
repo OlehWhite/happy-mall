@@ -13,6 +13,7 @@ import {
 import Slider from "react-slick";
 import { DATA_IMGS } from "@/components/HowFindUs/data";
 import IMGLoad from "@/public/load.png";
+import { useTranslation } from "react-i18next";
 
 const settings = {
   dots: false,
@@ -25,6 +26,7 @@ const settings = {
 };
 
 const HowFindUs: FC = () => {
+  const { t } = useTranslation();
   const ref = useRef<Slider | null>(null);
   const [progress, setProgress] = useState<number>(0);
   const [activeElement, setActiveElement] = useState<number>(0);
@@ -49,9 +51,9 @@ const HowFindUs: FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
-      );
+      setProgress((prevProgress) => {
+        return prevProgress >= 100 ? 0 : prevProgress + 10;
+      });
     }, 1000);
 
     return () => {
@@ -63,6 +65,22 @@ const HowFindUs: FC = () => {
     setProgress(0);
     setActiveElement(index);
     ref.current?.slickGoTo(index);
+
+    const timer = setInterval(() => {
+      setActiveElement((prevState) => {
+        if (prevState === 4) {
+          ref.current?.slickGoTo(0);
+          return 0;
+        } else {
+          ref.current?.slickNext();
+          return prevState + 1;
+        }
+      });
+    }, 11000);
+
+    return () => {
+      clearInterval(timer);
+    };
   };
 
   return (
@@ -73,8 +91,8 @@ const HowFindUs: FC = () => {
         ))}
       </Slider>
       <WrapperInfo>
-        <Title>Доступная Роскошь</Title>
-        <Button href="/how-find-us">Как нас найти</Button>
+        <Title>{t("affordable-luxury")}</Title>
+        <Button href="/how-find-us">{t("how-find-us")}</Button>
         <Wrapper>
           {DATA_IMGS.map((_, index) => (
             <Block key={index} onClick={() => handleClick(index)}>

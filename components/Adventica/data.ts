@@ -3,20 +3,20 @@ import IMG2 from "public/ad-2.png";
 
 export const DATA = [
   {
-    title: "КАРТИНГ",
-    text: "Здесь вы найдете лучшие картинговые трассы для любителей адреналина и скорости.",
+    title: "adventica.carting",
+    text: "adventica.text-carting",
   },
   {
-    title: "БАТУТЫ",
-    text: "Для детей и взрослых у нас есть большие и безопасные батуты, где вы можете весело провести время и подпрыгнуть в воздух.",
+    title: "adventica.bathutes",
+    text: "adventica.text-bathutes",
   },
   {
-    title: "ИГРОВЫЕ КОМНАТЫ",
-    text: "Наши игровые комнаты оборудованы последним современным оборудованием и ждут вас с различными играми и заданиями.",
+    title: "adventica.game-rooms",
+    text: "adventica.text-game-rooms",
   },
   {
-    title: "АТРАКЦИОНЫ",
-    text: "Любителям аттракционов мы предлагаем множество развлекательных аттракционов для всей семьи.",
+    title: "adventica.atractions",
+    text: "adventica.text-atractions",
   },
 ];
 

@@ -24,6 +24,7 @@ import {
 import { BLOCKS, DATA } from "@/components/Adventica/data";
 import Slider from "react-slick";
 import { Box } from "@mui/system";
+import { useTranslation } from "react-i18next";
 
 const settings = {
   dots: false,
@@ -39,8 +40,9 @@ const settings = {
 
 const Adventica: FC = () => {
   const [activeBtn, setActiveBtn] = useState<number>(0);
-  const [sortEvents, setSortEvents] = useState<string>("КАРТИНГ");
+  const [sortEvents, setSortEvents] = useState<string>("adventica.carting");
   const ref = useRef<Slider | null>(null);
+  const { t } = useTranslation();
 
   const handleButtonClick = (index: number, event: string): void => {
     setActiveBtn(index);
@@ -67,7 +69,7 @@ const Adventica: FC = () => {
       <Container>
         <WrapperLogo>
           <Logo src="adventica.png" alt="Adventica" title="Adventica" />
-          <Title>Центр для всей семьи</Title>
+          <Title>{t("adventica.title")}</Title>
         </WrapperLogo>
         <Wrapper>
           {DATA.map((menu, index) => (
@@ -76,7 +78,7 @@ const Adventica: FC = () => {
                 onClick={() => handleButtonClick(index, menu.title)}
                 active={activeBtn === index}
               >
-                {menu.title}
+                {t(menu.title)}
               </Menu>
               {index < DATA.length - 1 && (
                 <Img src="load.png" alt="Load" title="Load" />
@@ -105,11 +107,11 @@ const Adventica: FC = () => {
         </Box>
         {DATA.map(
           (block, index) =>
-            sortEvents === block.title && (
+            t(sortEvents) === t(block.title) && (
               <WrapperInfoBlock key={index}>
-                <TitleInfo>{block.title}</TitleInfo>
+                <TitleInfo>{t(block.title)}</TitleInfo>
                 <Line />
-                <Text>{block.text}</Text>
+                <Text>{t(block.text)}</Text>
               </WrapperInfoBlock>
             )
         )}

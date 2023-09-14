@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "restaurant": "Restaurante",
+    "services": "Services",
+    "entertainment": "Entertainment",
+    "announcements": "Announcements",
+    "contacts": "Contacts",
+    "news-and-discounts": "News and discounts",
+    "about-us": "About us",
+    "vacancies": "Vacancies",
+    "tenants": "Tenants"
+  },
+  "map-mall": "MAP MALL",
+  "affordable-luxury": "Affordable Luxury",
+  "how-find-us": "How find us",
+  "happy-mall": {
+    "title": "the largest mall in Moldova",
+    "text": "The shopping center is built according to the highest international quality standards. Here you will find a Fashion Gallery with more than 250 brands, an area with Home, lifestyle & beauty products with all included services"
+  },
+  "read-more": "READ MORE",
+  "open-smth-new": {
+    "title": "Discover something new",
+    "block-title": "The largest fashion gallery",
+    "block-title-two": "Home and soul",
+    "block-title-three": "Beauty and tenderness",
+    "block-title-four": "Vacation",
+    "clothes": "Clothes",
+    "baby-clothes": "Children's clothes",
+    "shoes": "Shoes",
+    "baby-shoes": "Children's shoes",
+    "underwear": "Underwear",
+    "sport": "Sport",
+    "bags-and-accessories": "Bags and accessories",
+    "more-brands": "MORE BRANDS"
+  },
+  "main-anons": {
+    "title": "Main Announcements",
+    "all-anons": "ALL ANNOUNCES",
+    "actions": "ACTIONS",
+    "news": "NEWS",
+    "events": "EVENTS",
+    "text": "Discount week on summer children's clothes and shoes - buy now"
+  },
+  "follow-us": {
+    "title": "Follow us on social media",
+    "text": "Subscribe to be the first to receive information about new events, discounts and exclusive offers"
+  },
+  "happy-cinema": {
+    "title": "Modern movie theater",
+    "website": "GO TO THE SITE"
+  },
+  "adventica": {
+    "title": "Family Center",
+    "carting": "CARTING",
+    "bathutes": "BATHUTES",
+    "game-rooms": "GAME ROOMS",
+    "atractions": "ATRACTIONS",
+    "text-carting": "Here you will find the best karting tracks for adrenaline and speed lovers.",
+    "text-bathutes": "For kids and adults, we have large and safe trampolines where you can have fun and bounce in the air.",
+    "text-game-rooms": "Our playrooms are equipped with the latest state-of-the-art equipment and await you with a variety of games and tasks.",
+    "text-atractions": "For amusement lovers, we offer many entertaining rides for the whole family."
+  },
+  "our-contact": {
+    "title": "Our contacts",
+    "second-title": "How to get there",
+    "car": "By car",
+    "transportation": "By public transportation",
+    "own": "On your own",
+    "happy-bus": "HAPPY BUS",
+    "addrees": "Kishenev, Ochakovskaya str. 44a",
+    "working-hours": "Work schedule: 10:00-22:00"
+  },
+  "footer": {
+    "polit": "Privacy Policy",
+    "mailing": "Sign up for the newsletter",
+    "email": "Your e-mail"
+  }
+}

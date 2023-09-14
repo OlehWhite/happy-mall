@@ -187,6 +187,7 @@ export const WrapperInfoBlock = styled("div")(() => {
     backgroundColor: "#FDFCFA",
     margin: "0 auto",
     bottom: 149,
+    height: 165,
   };
 });
 

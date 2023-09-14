@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
-  "Магазин",
-  "Рестораны",
-  "Услуги",
-  "Развлечения",
-  "Анонсы",
-  "Контакты",
+  "nav.shop",
+  "nav.restaurant",
+  "nav.services",
+  "nav.entertainment",
+  "nav.announcements",
+  "nav.contacts",
 ];

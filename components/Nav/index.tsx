@@ -8,7 +8,8 @@ const Nav: FC = () => {
 
   return (
     <Ul>
-      {NAV_LINKS && NAV_LINKS.map((link, index) => <Li key={index}>{link}</Li>)}
+      {NAV_LINKS &&
+        NAV_LINKS.map((link, index) => <Li key={index}>{t(link)}</Li>)}
     </Ul>
   );
 };

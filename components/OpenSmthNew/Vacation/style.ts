@@ -65,14 +65,6 @@ export const WrapperBlock = styled("div")(() => {
   return {};
 });
 
-export const MoreBrands = styled("div")(() => {
-  return {
-    display: "flex",
-    alignItems: "flex-start",
-    cursor: "pointer",
-  };
-});
-
 export const Text = styled("p")(() => {
   return {
     fontSize: 16,

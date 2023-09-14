@@ -18,11 +18,11 @@ export const WrapperInfo = styled("div")(() => {
     position: "absolute",
     top: 0,
     width: "100%",
-    boxShadow: "inset 0 0px 150px 0px rgba(0,0,0,.7)",
+    boxShadow: "inset 0 0px 250px 0px rgba(0,0,0,.7)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 112,
+    paddingBottom: 57,
   };
 });
 
@@ -61,7 +61,7 @@ export const Button = styled(Link)(() => {
 export const Wrapper = styled("div")(() => {
   return {
     display: "flex",
-    marginTop: 375,
+    marginTop: 430,
     marginLeft: 29,
   };
 });

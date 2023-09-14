@@ -16,12 +16,15 @@ import {
   TitleHTA,
 } from "./style";
 import { DATA_HOW_TO_ARR, DATA_OUR_CONT } from "@/components/OurContacts/data";
+import { useTranslation } from "react-i18next";
 
 const OurContacts: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <Contacts>
-        <TitleOC>Наши контакты</TitleOC>
+        <TitleOC>{t("our-contact.title")}</TitleOC>
         <Line />
         <WrapperOurContacts>
           {DATA_OUR_CONT.map((contact, index) => (
@@ -31,12 +34,12 @@ const OurContacts: FC = () => {
                 alt={contact.title}
                 title={contact.title}
               />
-              <TitleContact>{contact.title}</TitleContact>
+              <TitleContact>{t(contact.title)}</TitleContact>
             </Block>
           ))}
         </WrapperOurContacts>
         <HowToArrive>
-          <TitleHTA>Как добраться</TitleHTA>
+          <TitleHTA>{t("our-contact.second-title")}</TitleHTA>
           <Line />
           <WrapperHowToArrive>
             {DATA_HOW_TO_ARR.map((contact, index) => (
@@ -46,7 +49,7 @@ const OurContacts: FC = () => {
                   alt={contact.title}
                   title={contact.title}
                 />
-                <TitleContact>{contact.title}</TitleContact>
+                <TitleContact>{t(contact.title)}</TitleContact>
               </Block>
             ))}
           </WrapperHowToArrive>

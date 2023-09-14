@@ -1,23 +1,15 @@
 import { FC } from "react";
 import { Container, Link } from "./style";
-
-const menuLinks = [
-  "Магазины",
-  "Рестораны",
-  "Услуги",
-  "Развлечения",
-  "Новости и скидки",
-  "О нас",
-  "Вакансии",
-  "Арендаторам",
-  "Контакты",
-];
+import { useTranslation } from "react-i18next";
+import { DATA } from "@/components/Layout/Footer/BlockMenu/data";
 
 const BlockMenu: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
-      {menuLinks.map((link, index) => (
-        <Link key={index}>{link}</Link>
+      {DATA.map((link, index) => (
+        <Link key={index}>{t(link)}</Link>
       ))}
     </Container>
   );

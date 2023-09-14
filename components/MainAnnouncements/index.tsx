@@ -20,6 +20,7 @@ import {
 import { BLOCKS, MENUS } from "@/components/MainAnnouncements/menu";
 import Slider from "react-slick";
 import AnimationLink from "@/components/AnimationLink";
+import { useTranslation } from "react-i18next";
 
 const settings = {
   dots: false,
@@ -34,7 +35,8 @@ const settings = {
 const MainAnnouncements: FC = () => {
   const ref = useRef<Slider | null>(null);
   const [activeBtn, setActiveBtn] = useState<number>(0);
-  const [sortEvents, setSortEvents] = useState<string>("ВСЕ АНОНСЫ");
+  const [sortEvents, setSortEvents] = useState<string>("main-anons.all-anons");
+  const { t } = useTranslation();
 
   const handleButtonClick = (index: number, event: string): void => {
     setActiveBtn(index);
@@ -51,7 +53,7 @@ const MainAnnouncements: FC = () => {
 
   return (
     <Container>
-      <Title>Главные анонсы</Title>
+      <Title>{t("main-anons.title")}</Title>
       <Wrapper>
         {MENUS.map((menu, index) => (
           <Wrapper key={index}>
@@ -59,7 +61,7 @@ const MainAnnouncements: FC = () => {
               onClick={() => handleButtonClick(index, menu.title)}
               active={activeBtn === index}
             >
-              {menu.title}
+              {t(menu.title)}
             </Menu>
             {index < MENUS.length - 1 && (
               <Img src="load.png" alt="Load" title="Load" />
@@ -75,15 +77,19 @@ const MainAnnouncements: FC = () => {
         </WrapperLeft>
         <Slider className="custom-slider-main-anons" ref={ref} {...settings}>
           {BLOCKS.filter(
-            (block) => sortEvents === "ВСЕ АНОНСЫ" || block.title === sortEvents
+            (block) =>
+              t(sortEvents) === "ВСЕ АНОНСЫ" ||
+              t(sortEvents) === "ALL ANNOUNCES" ||
+              t(sortEvents) === "TOATE ANUNȚURILE" ||
+              t(block.title) === t(sortEvents)
           ).map((block, index) => (
             <Info key={index}>
               <Img src={block.img} alt={block.title} title={block.title} />
               <WrapperTitle>
                 <Img src={block.icon} alt={block.title} title={block.title} />
-                <TitleInfo>{block.title}</TitleInfo>
+                <TitleInfo>{t(block.title)}</TitleInfo>
               </WrapperTitle>
-              <Text>{block.text}</Text>
+              <Text>{t(block.text)}</Text>
               <Date>{block.date}</Date>
             </Info>
           ))}
@@ -95,7 +101,7 @@ const MainAnnouncements: FC = () => {
         </WrapperRight>
       </WrapperInfos>
       <AllAnons>
-        <AnimationLink text={"ВСЕ АНОНСЫ"} />
+        <AnimationLink text={"main-anons.all-anons"} />
       </AllAnons>
     </Container>
   );

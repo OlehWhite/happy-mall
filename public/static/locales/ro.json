@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "shop": "Magazin",
+    "restaurant": "Restaurante",
+    "services": "Servicii",
+    "entertainment": "Divertisment",
+    "announcements": "Anunțuri",
+    "contacts": "Contacte",
+    "news-and-discounts": "Noutăți și reduceri",
+    "about-us": "Despre noi",
+    "vacancies": "Posturi vacante",
+    "tenants": "Către chiriași"
+  },
+  "map-mall": "HARTA MOLL'S",
+  "affordable-luxury": "Lux la prețuri accesibile",
+  "how-find-us": "Cum ne găsiți",
+  "happy-mall": {
+    "title": "cel mai mare mall din Moldova",
+    "text": "Centrul comercial este construit la cele mai înalte standarde internaționale de calitate. Aici veți găsi o galerie de modă cu peste 250 de mărci, o zonă cu produse pentru casă, lifestyle și frumusețe, cu toate serviciile incluse."
+  },
+  "read-more": "CITEȘTE MAI MULT",
+  "open-smth-new": {
+    "title": "Descoperiți ceva nou",
+    "block-title": "Cea mai mare galerie de modă",
+    "block-title-two": "Casă și suflet",
+    "block-title-three": "Frumusețe și tandrețe",
+    "block-title-four": "Sărbători",
+    "clothes": "Îmbrăcăminte",
+    "baby-clothes": "Haine pentru copii",
+    "shoes": "Încălțăminte",
+    "baby-shoes": "Pantofi pentru copii",
+    "underwear": "Lenjerie intimă",
+    "sport": "Sport",
+    "bags-and-accessories": "Genți și accesorii",
+    "more-brands": "MAI MULTE MARCI"
+  },
+  "main-anons": {
+    "title": "Anunțuri principale",
+    "all-anons": "TOATE ANUNȚURILE",
+    "actions": "ACȚIUNI",
+    "news": "ȘTIRI",
+    "events": "EVENIMENTE",
+    "text": "Săptămâna de reduceri la hainele și pantofii de vară pentru copii - cumpărați acum"
+  },
+  "follow-us": {
+    "title": "Urmăriți-ne pe rețelele sociale",
+    "text": "Înscrieți-vă pentru a fi primii care primesc informații despre noi evenimente, reduceri și oferte exclusive."
+  },
+  "happy-cinema": {
+    "title": "Cinema modern",
+    "website": "MERGEȚI LA SITE"
+  },
+  "adventica": {
+    "title": "Centru pentru întreaga familie",
+    "carting": "CARTING",
+    "bathutes": "BĂILE",
+    "game-rooms": "SĂLI DE JOCURI",
+    "atractions": "ATRACȚIUNI",
+    "text-carting": "Aici veți găsi cele mai bune piste de karting pentru iubitorii de adrenalină și viteză.",
+    "text-bathutes": "Avem trambuline mari și sigure pentru copii și adulți pentru a se distra și a sări în aer.",
+    "text-game-rooms": "O varietate de jocuri și sarcini vă așteaptă în sălile noastre de joacă ultramoderne.",
+    "text-atractions": "Pentru iubitorii de distracții, oferim multe atracții distractive pentru întreaga familie."
+  },
+  "our-contact": {
+    "title": "Contactele noastre",
+    "second-title": "Cum se ajunge acolo",
+    "car": "Cu mașina",
+    "transportation": "Cu transportul public",
+    "own": "În ritmul tău propriu",
+    "happy-bus": "HAPPY BUS",
+    "addrees": "Kishenev, Ochakovskaya str. 44a",
+    "working-hours": "Program de lucru: 10:00-22:00"
+  },
+  "footer": {
+    "polit": "Politica de confidențialitate",
+    "mailing": "Înscrieți-vă la newsletter",
+    "email": "Al dumneavoastră e-mail"
+  }
+}

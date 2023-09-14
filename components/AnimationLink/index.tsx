@@ -6,12 +6,15 @@ import {
   WrapperAnimationBnt,
   WrapperReadMore,
 } from "./style";
+import { useTranslation } from "react-i18next";
 
 type Text = {
   text: string;
 };
 
 const MapMall: FC<Text> = ({ text }) => {
+  const { t } = useTranslation();
+
   return (
     <WrapperReadMore id="wrapperReadMore">
       <WrapperAnimationBnt>
@@ -24,7 +27,7 @@ const MapMall: FC<Text> = ({ text }) => {
         />
       </WrapperAnimationBnt>
 
-      <TextSmall id="wrapperReadMoreTextSmall">{text}</TextSmall>
+      <TextSmall id="wrapperReadMoreTextSmall">{t(text)}</TextSmall>
     </WrapperReadMore>
   );
 };

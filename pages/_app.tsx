@@ -15,20 +15,18 @@ const theme = createTheme({});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <I18nextProvider i18n={i18n}>
       <Head>
         <title>Happy Mall</title>
       </Head>
-      <I18nextProvider i18n={i18n}>
-        <Layout>
-          <Header />
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </ThemeProvider>
-          <Footer />
-        </Layout>
-      </I18nextProvider>
-    </>
+      <Layout>
+        <Header />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+        <Footer />
+      </Layout>
+    </I18nextProvider>
   );
 }
 

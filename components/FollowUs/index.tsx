@@ -21,10 +21,12 @@ import {
 } from "./style";
 import { LINKS } from "@/components/FollowUs/links";
 import ModalVideo from "@/components/ModalVideo";
+import { useTranslation } from "react-i18next";
 
 const FollowUs: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const handleOpen = () => setOpenModalWindow(true);
   const handleClose = () => setOpenModalWindow(false);
@@ -51,12 +53,9 @@ const FollowUs: FC = () => {
         </WrapperPlay>
       </WrapperImg>
       <BlockInfo>
-        <Title>Следите за нами в социальных сетях</Title>
+        <Title>{t("follow-us.title")}</Title>
         <Line />
-        <Text>
-          Подписываетесь, чтобы первым получать информацию о новых событиях,
-          скидках и эксклюзивных предложениях
-        </Text>
+        <Text>{t("follow-us.text")}</Text>
         <BlockLinks>
           {LINKS.map((link, index) => (
             <Block key={index}>

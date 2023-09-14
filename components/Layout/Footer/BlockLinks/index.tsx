@@ -14,6 +14,7 @@ import IMGInstagram from "public/instagram.png";
 import IMGFacebook from "public/facebook.png";
 import IMGTiktok from "public/tiktok.png";
 import FooterLogo from "@/components/Layout/Footer/FooterLogo";
+import { useTranslation } from "react-i18next";
 
 const links = [
   {
@@ -26,6 +27,8 @@ const links = [
 ];
 
 const BlockLinks: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <FooterLogo />
@@ -39,7 +42,7 @@ const BlockLinks: FC = () => {
         ))}
       </WrapperLinks>
       <PrivacyPolicy>
-        <Text>Политика конфиденциальности</Text>
+        <Text>{t("footer.polit")}</Text>
         <WrapperText>
           <Text>© 2023 Happy Mall</Text>
           <Text>

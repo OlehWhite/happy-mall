@@ -11,13 +11,16 @@ import {
   WrapperBlocks,
 } from "./style";
 import AnimationLink from "@/components/AnimationLink";
+import { useTranslation } from "react-i18next";
 
 const BlockInfo: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
-      <Title>Подпишитесь на рассылку</Title>
+      <Title>{t("footer.mailing")}</Title>
       <Form>
-        <Input placeholder="Ваш e-mail"></Input>
+        <Input placeholder={t("footer.email")}></Input>
         <Button>
           <Img src="arrow-right.png" alt="Arrow right" title="Arrow right" />
         </Button>
@@ -25,7 +28,7 @@ const BlockInfo: FC = () => {
       <WrapperBlocks>
         <Block>
           <Img src="location.png" alt="Location" title="Location" />
-          <Text>г. Кишенев, ул. Очаковская 44а</Text>
+          <Text>{t("our-contact.addrees")}</Text>
         </Block>
         <Block>
           <Img src="time.png" alt="Time" title="Time" />
@@ -40,7 +43,7 @@ const BlockInfo: FC = () => {
           <Text>happymall.info@gmail.com</Text>
         </Block>
       </WrapperBlocks>
-      <AnimationLink text={"КАРТА МОЛЛА"} />
+      <AnimationLink text={"map-mall"} />
     </Container>
   );
 };
