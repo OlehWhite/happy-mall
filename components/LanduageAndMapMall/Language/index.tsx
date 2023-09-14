@@ -12,7 +12,7 @@ const Language: FC = () => {
 
   return (
     <Container>
-      <Select d="language" onChange={changeLanguage} value={i18n.language}>
+      <Select onChange={changeLanguage} value={i18n.language}>
         <option style={{ color: "#1E1E21" }} value="ru">
           RU
         </option>
