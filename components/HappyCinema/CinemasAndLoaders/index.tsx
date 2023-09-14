@@ -70,7 +70,7 @@ const Loader: FC = () => {
     ref.current?.slickGoTo(index);
   };
 
-  const handleOpen = (link) => {
+  const handleOpen = (link: string) => {
     setCurrentVide(link);
     setProgress(0);
     setOpenModalWindow(true);
