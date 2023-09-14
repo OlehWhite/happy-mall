@@ -63,7 +63,7 @@ const Loader: FC = () => {
     };
   }, []);
 
-  const handleClick = (index, link) => {
+  const handleClick = (index: number, link: string) => {
     setCurrentVide(link);
     setProgress(0);
     setActiveElement(index);
