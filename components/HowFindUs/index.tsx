@@ -59,7 +59,7 @@ const HowFindUs: FC = () => {
     };
   }, []);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     setProgress(0);
     setActiveElement(index);
     ref.current?.slickGoTo(index);
