@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const Language: FC = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (event) => {
+  const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
   };
