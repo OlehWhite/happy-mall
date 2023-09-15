@@ -9,6 +9,7 @@ import {
   Circular,
   Wrapper,
   ImgLoad,
+  CustomSlider,
 } from "./style";
 import Slider from "react-slick";
 import { DATA_IMGS } from "@/components/HowFindUs/data";
@@ -30,24 +31,28 @@ const HowFindUs: FC = () => {
   const ref = useRef<Slider | null>(null);
   const [progress, setProgress] = useState<number>(0);
   const [activeElement, setActiveElement] = useState<number>(0);
+  const [progressTime, setProgressTime] = useState<number>(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveElement((prevState) => {
-        if (prevState === 4) {
-          ref.current?.slickGoTo(0);
-          return 0;
-        } else {
-          ref.current?.slickNext();
-          return prevState + 1;
-        }
-      });
-    }, 11000);
+    const timer = setTimeout(() => {
+      if (progressTime === 11000) {
+        setProgressTime(0);
+        setActiveElement((prevState) => {
+          if (prevState === 4) {
+            ref.current?.slickGoTo(0);
+            return 0;
+          } else {
+            ref.current?.slickNext();
+            return prevState + 1;
+          }
+        });
+      } else {
+        setProgressTime((prevState) => prevState + 1000);
+      }
+    }, 900);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+    return () => clearTimeout(timer);
+  }, [progressTime]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,34 +67,19 @@ const HowFindUs: FC = () => {
   }, []);
 
   const handleClick = (index: number) => {
+    setProgressTime(0);
     setProgress(0);
     setActiveElement(index);
     ref.current?.slickGoTo(index);
-
-    const timer = setInterval(() => {
-      setActiveElement((prevState) => {
-        if (prevState === 4) {
-          ref.current?.slickGoTo(0);
-          return 0;
-        } else {
-          ref.current?.slickNext();
-          return prevState + 1;
-        }
-      });
-    }, 11000);
-
-    return () => {
-      clearInterval(timer);
-    };
   };
 
   return (
     <Container>
-      <Slider ref={ref} {...settings}>
+      <CustomSlider ref={ref} {...settings}>
         {DATA_IMGS.map((img, index) => (
           <Img key={index} src={img.img} alt={img.title} title={img.title} />
         ))}
-      </Slider>
+      </CustomSlider>
       <WrapperInfo>
         <Title>{t("affordable-luxury")}</Title>
         <Button href="/how-find-us">{t("how-find-us")}</Button>

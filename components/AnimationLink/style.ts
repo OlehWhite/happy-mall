@@ -44,6 +44,10 @@ export const TextSmall = styled("p")(() => {
     fontWeight: 500,
     color: "#C6A687",
     transition: "transform 0.3s",
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+    },
   };
 });
 

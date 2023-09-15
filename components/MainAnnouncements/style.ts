@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import Slider from "react-slick";
 
 export const Container = styled("div")(() => {
   return {
@@ -7,6 +8,10 @@ export const Container = styled("div")(() => {
     margin: "0 auto",
     padding: "0 120px",
     boxSizing: "border-box",
+
+    "@media (max-width: 375px)": {
+      padding: "0 20px",
+    },
   };
 });
 
@@ -25,6 +30,10 @@ export const Title = styled("h2")(() => {
     fontWeight: 500,
     color: "#FDFCFA",
     margin: "0 0 32px 0",
+
+    "@media (max-width: 375px)": {
+      fontSize: 26,
+    },
   };
 });
 
@@ -37,6 +46,14 @@ export const Info = styled("div")(() => {
 
 export const Img = styled("img")(() => {
   return {};
+});
+
+export const ImgInfo = styled("img")(() => {
+  return {
+    "@media (max-width: 375px)": {
+      width: 315,
+    },
+  };
 });
 
 export const WrapperInfos = styled("div")(() => {
@@ -63,6 +80,10 @@ export const Text = styled("p")(() => {
     fontWeight: 400,
     color: "#FDFCFA",
     lineHeight: "25px",
+
+    "@media (max-width: 375px)": {
+      fontSize: 16,
+    },
   };
 });
 
@@ -89,16 +110,6 @@ export const AllAnons = styled("div")(() => {
     alignItems: "center",
     justifyContent: "center",
     marginTop: 48,
-  };
-});
-
-export const TextAnons = styled("h3")(() => {
-  return {
-    fontSize: 16,
-    fontWeight: 500,
-    color: "#C6A687",
-    margin: "3px 0 0 12px",
-    cursor: "pointer",
   };
 });
 
@@ -148,6 +159,10 @@ export const WrapperLeft = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -159,6 +174,10 @@ export const WrapperRight = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -179,5 +198,7 @@ export const Menu = styled("button")(({ active }: { active: boolean }) => {
       color: "#AF8B68",
       borderBottom: "2px solid #C6A687",
     },
+
+    "@media (max-width: 375px)": {},
   };
 });

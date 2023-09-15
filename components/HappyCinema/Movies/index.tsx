@@ -9,22 +9,25 @@ import {
   Movie,
   LogoMovie,
   WrapperSlider,
+  CustomSlider,
 } from "./style";
 import Slider from "react-slick";
 import { MOVIES } from "@/components/HappyCinema/Movies/movies";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 6,
-  slidesToScroll: 2,
-  arrows: false,
-  useTransform: false,
-};
+import { useMediaQuery } from "@mui/material";
 
 const Movies: FC = () => {
   const ref = useRef<Slider | null>(null);
+  const isWideScreen = useMediaQuery("(min-width:375px)");
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isWideScreen ? 6 : 2,
+    slidesToScroll: isWideScreen ? 2 : 1,
+    arrows: false,
+    useTransform: false,
+  };
 
   const onNext = (): void => {
     ref.current?.slickNext();
@@ -42,7 +45,7 @@ const Movies: FC = () => {
         </ButtonLeft>
       </WrapperLeft>
       <WrapperSlider>
-        <Slider className="custom-slider-movies" ref={ref} {...settings}>
+        <CustomSlider className="custom-slider-movies" ref={ref} {...settings}>
           {MOVIES.map((movie, index) => (
             <Movie key={index}>
               <LogoMovie
@@ -52,7 +55,7 @@ const Movies: FC = () => {
               />
             </Movie>
           ))}
-        </Slider>
+        </CustomSlider>
       </WrapperSlider>
       <WrapperRight>
         <ButtonRight onClick={onNext}>

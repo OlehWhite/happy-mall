@@ -11,6 +11,10 @@ export const Container = styled("div")(() => {
     boxSizing: "border-box",
     margin: "0 auto",
     marginTop: 140,
+
+    "@media (max-width: 375px)": {
+      padding: "0 20px",
+    },
   };
 });
 
@@ -24,7 +28,11 @@ export const WrapperLogo = styled("div")(() => {
 });
 
 export const Logo = styled("img")(() => {
-  return {};
+  return {
+    "@media (max-width: 375px)": {
+      width: 300,
+    },
+  };
 });
 
 export const Title = styled("h2")(() => {

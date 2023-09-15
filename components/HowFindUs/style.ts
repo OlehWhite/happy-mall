@@ -1,5 +1,6 @@
 import { CircularProgress, styled } from "@mui/material";
 import Link from "next/link";
+import Slider from "react-slick";
 
 export const Container = styled("div")(() => {
   return {};
@@ -23,6 +24,10 @@ export const WrapperInfo = styled("div")(() => {
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: 57,
+
+    "@media (max-width: 375px)": {
+      height: 715,
+    },
   };
 });
 
@@ -33,6 +38,11 @@ export const Title = styled("h1")(() => {
     fontWeight: 500,
     lineHeight: "115%",
     color: "#FDFCFA",
+
+    "@media (max-width: 375px)": {
+      fontSize: 34,
+      textAlign: "center",
+    },
   };
 });
 
@@ -55,6 +65,10 @@ export const Button = styled(Link)(() => {
     "&:hover": {
       backgroundColor: "#AF8B68",
     },
+
+    "@media (max-width: 375px)": {
+      padding: 10,
+    },
   };
 });
 
@@ -63,6 +77,10 @@ export const Wrapper = styled("div")(() => {
     display: "flex",
     marginTop: 430,
     marginLeft: 29,
+
+    "@media (max-width: 375px)": {
+      marginTop: 190,
+    },
   };
 });
 
@@ -72,6 +90,10 @@ export const Block = styled("div")(() => {
     zIndex: 1,
     borderRadius: "50%",
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      padding: 2,
+    },
   };
 });
 
@@ -81,6 +103,11 @@ export const ImgLoad = styled("img")(() => {
     bottom: 7,
     right: 19,
     width: 12,
+
+    "@media (max-width: 375px)": {
+      right: 18,
+      width: 10,
+    },
   };
 });
 
@@ -89,6 +116,17 @@ export const Circular = styled(CircularProgress)(() => {
     color: "#C6A687",
     "& .MuiCircularProgress-svg": {
       transform: "scale(1.5)",
+    },
+  };
+});
+
+export const CustomSlider = styled(Slider)(() => {
+  return {
+    "@media (max-width: 375px)": {
+      "& img": {
+        height: "700px",
+        width: "auto",
+      },
     },
   };
 });

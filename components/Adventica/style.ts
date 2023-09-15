@@ -9,6 +9,10 @@ export const Container = styled("div")(() => {
     padding: "0 120px",
     boxSizing: "border-box",
     margin: "0 auto",
+
+    "@media (max-width: 375px)": {
+      padding: "0 20px",
+    },
   };
 });
 
@@ -117,6 +121,19 @@ export const CustomSlider = styled(Slider)(() => ({
     transform: "scale(0.97)",
     transition: "transform 0.3s ease",
   },
+
+  "@media (max-width: 375px)": {
+    "& img": {
+      maxWidth: 196,
+      paddingLeft: 138,
+    },
+
+    ".slick-list": {
+      height: 295,
+      paddingTop: "168px !important",
+      marginLeft: -3,
+    },
+  },
 }));
 
 export const ButtonLeft = styled("div")(() => {
@@ -165,6 +182,10 @@ export const WrapperLeft = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -176,6 +197,10 @@ export const WrapperRight = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -188,6 +213,11 @@ export const WrapperInfoBlock = styled("div")(() => {
     margin: "0 auto",
     bottom: 149,
     height: 165,
+
+    "@media (max-width: 375px)": {
+      height: 200,
+      width: 313,
+    },
   };
 });
 
@@ -220,5 +250,19 @@ export const Text = styled("p")(() => {
     padding: "0 0 24px 24px",
     width: "100%",
     maxWidth: 500,
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+      maxWidth: 280,
+    },
+  };
+});
+
+export const WrapperAnimation = styled("div")(() => {
+  return {
+    position: "relative",
+    top: -70,
+    display: "flex",
+    justifyContent: "center",
   };
 });

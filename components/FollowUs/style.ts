@@ -7,6 +7,11 @@ export const Container = styled("div")(() => {
     margin: "140px auto 0",
     display: "flex",
     justifyContent: "space-between",
+
+    "@media (max-width: 375px)": {
+      flexDirection: "column",
+      margin: "80px auto 0",
+    },
   };
 });
 
@@ -40,11 +45,23 @@ export const WrapperImg = styled("div")(() => {
     maxWidth: 972,
     height: "100%",
     maxHeight: 639,
+
+    "@media (max-width: 375px)": {
+      flexDirection: "column",
+    },
   };
 });
 
 export const Img = styled("img")(() => {
   return {};
+});
+
+export const ImgMob = styled("img")(() => {
+  return {
+    "@media (max-width: 375px)": {
+      width: 358,
+    },
+  };
 });
 
 export const BlockInfo = styled("div")(() => {
@@ -61,6 +78,12 @@ export const Title = styled("h2")(() => {
     fontWeight: 500,
     lineHeight: "70px",
     padding: "130px 120px 32px 120px",
+
+    "@media (max-width: 375px)": {
+      fontSize: 26,
+      lineHeight: "40px",
+      padding: "40px 20px 40px 20px",
+    },
   };
 });
 
@@ -72,6 +95,10 @@ export const Line = styled("hr")(() => {
     margin: "0 0 24px 120px",
     borderColor: "#C6A687",
     backgroundColor: "#C6A687",
+
+    "@media (max-width: 375px)": {
+      margin: "0 0 24px 20px",
+    },
   };
 });
 
@@ -85,6 +112,10 @@ export const Text = styled("p")(() => {
     lineHeight: "25px",
     color: "#494843",
     padding: "0 0 32px 120px",
+
+    "@media (max-width: 375px)": {
+      padding: "0 0 24px 20px",
+    },
   };
 });
 
@@ -95,6 +126,10 @@ export const BlockLinks = styled("div")(() => {
     margin: "0 0 0 120px",
     maxWidth: 545,
     width: "100%",
+
+    "@media (max-width: 375px)": {
+      margin: "0 0 0 20px",
+    },
   };
 });
 

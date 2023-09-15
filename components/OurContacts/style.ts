@@ -7,6 +7,10 @@ export const Container = styled("div")(() => {
     maxWidth: 1920,
     margin: "0 auto",
     boxSizing: "border-box",
+
+    "@media (max-width: 375px)": {
+      flexDirection: "column",
+    },
   };
 });
 
@@ -17,12 +21,22 @@ export const Contacts = styled("div")(() => {
     backgroundColor: "#FDFCFA",
     maxHeight: 560,
     paddingLeft: 120,
+
+    "@media (max-width: 375px)": {
+      paddingLeft: 20,
+      maxHeight: "none",
+    },
   };
 });
 
 export const Map = styled("div")(() => {
   return {
     position: "relative",
+
+    "@media (max-width: 375px)": {
+      width: "100%",
+      overflow: "hidden",
+    },
   };
 });
 
@@ -46,6 +60,10 @@ export const TitleOC = styled("h2")(() => {
     margin: 0,
     marginTop: 60,
     paddingBottom: 26,
+
+    "@media (max-width: 375px)": {
+      fontSize: 24,
+    },
   };
 });
 
@@ -57,6 +75,10 @@ export const TitleHTA = styled("h2")(() => {
     margin: 0,
     paddingBottom: 26,
     marginTop: 46,
+
+    "@media (max-width: 375px)": {
+      fontSize: 24,
+    },
   };
 });
 

@@ -15,5 +15,9 @@ export const LogoImg = styled("img")(() => {
     width: 84,
     height: 14,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      width: 73,
+    },
   };
 });

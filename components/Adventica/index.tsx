@@ -20,29 +20,33 @@ import {
   Text,
   Line,
   GlobalContainer,
+  WrapperAnimation,
 } from "./style";
 import { BLOCKS, DATA } from "@/components/Adventica/data";
 import Slider from "react-slick";
 import { Box } from "@mui/system";
 import { useTranslation } from "react-i18next";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "-10",
-  swipe: true,
-  arrows: false,
-};
+import { useMediaQuery } from "@mui/material";
+import AnimationLink from "@/components/AnimationLink";
 
 const Adventica: FC = () => {
   const [activeBtn, setActiveBtn] = useState<number>(0);
   const [sortEvents, setSortEvents] = useState<string>("adventica.carting");
   const ref = useRef<Slider | null>(null);
   const { t } = useTranslation();
+  const isWideScreen = useMediaQuery("(min-width:375px)");
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isWideScreen ? 3 : 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "-10",
+    swipe: true,
+    arrows: false,
+  };
 
   const handleButtonClick = (index: number, event: string): void => {
     setActiveBtn(index);
@@ -116,6 +120,9 @@ const Adventica: FC = () => {
             )
         )}
       </Container>
+      <WrapperAnimation>
+        <AnimationLink text={"happy-cinema.website"} />
+      </WrapperAnimation>
     </GlobalContainer>
   );
 };

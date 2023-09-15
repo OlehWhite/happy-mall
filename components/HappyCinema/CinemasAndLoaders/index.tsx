@@ -9,6 +9,7 @@ import {
   WrapperBlocks,
   WrapperPlay,
   Wrapper,
+  CustomSlider,
 } from "./style";
 import IMGLoad from "public/load.png";
 import { DATA_IMGS } from "@/components/HappyCinema/data";
@@ -32,24 +33,28 @@ const Loader: FC = () => {
   const [activeElement, setActiveElement] = useState<number>(0);
   const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
   const [currentVideo, setCurrentVide] = useState<string>("");
+  const [progressTime, setProgressTime] = useState<number>(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveElement((prevState) => {
-        if (prevState === 4) {
-          ref.current?.slickGoTo(0);
-          return 0;
-        } else {
-          ref.current?.slickNext();
-          return prevState + 1;
-        }
-      });
-    }, 11000);
+    const timer = setTimeout(() => {
+      if (progressTime === 11000) {
+        setProgressTime(0);
+        setActiveElement((prevState) => {
+          if (prevState === 4) {
+            ref.current?.slickGoTo(0);
+            return 0;
+          } else {
+            ref.current?.slickNext();
+            return prevState + 1;
+          }
+        });
+      } else {
+        setProgressTime((prevState) => prevState + 1000);
+      }
+    }, 900);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+    return () => clearTimeout(timer);
+  }, [progressTime]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -64,6 +69,7 @@ const Loader: FC = () => {
   }, []);
 
   const handleClick = (index: number, link: string) => {
+    setProgressTime(0);
     setCurrentVide(link);
     setProgress(0);
     setActiveElement(index);
@@ -80,11 +86,11 @@ const Loader: FC = () => {
 
   return (
     <Container>
-      <Slider ref={ref} {...settings}>
+      <CustomSlider ref={ref} {...settings}>
         {DATA_IMGS.map((img, index) => (
           <Logo key={index} src={img.img} alt={img.title} title={img.title} />
         ))}
-      </Slider>
+      </CustomSlider>
       <Wrapper>
         <WrapperImg>
           <WrapperPlay

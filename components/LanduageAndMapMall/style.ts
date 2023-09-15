@@ -6,5 +6,9 @@ export const Container = styled("div")(() => {
     justifyContent: "space-between",
     alignItems: "center",
     width: 250,
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });

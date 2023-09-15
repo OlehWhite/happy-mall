@@ -35,3 +35,16 @@ body {
 .active {
   z-index: 2;
 }
+
+@media screen and (max-width: 375px) {
+  .custom-slider {
+    width: 375px;
+    padding: 0;
+  }
+
+  .custom-slider-main-anons,
+  .custom-slider-movies{
+    width: 375px;
+  }
+
+}

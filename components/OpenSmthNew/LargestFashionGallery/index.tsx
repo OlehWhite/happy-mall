@@ -12,27 +12,30 @@ import {
   ImgCad,
   Name,
   Box,
+  WrapperButtons,
 } from "./style";
 import Slider from "react-slick";
 import AnimationLink from "@/components/AnimationLink";
 import { BTNS, CARDS_DATA } from "@/components/OpenSmthNew/data";
 import { useTranslation } from "react-i18next";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 5,
-  slidesToScroll: 2,
-  arrows: false,
-  useTransform: false,
-};
+import { useMediaQuery } from "@mui/material";
 
 const LargestFashionGallery: FC = () => {
   const ref = useRef<Slider | null>(null);
   const [switcher, setSwitcher] = useState<boolean>(true);
   const [activeButton, setActiveButton] = useState<number>(0);
   const { t } = useTranslation();
+  const isWideScreen = useMediaQuery("(min-width:375px)");
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isWideScreen ? 5 : 1,
+    slidesToScroll: isWideScreen ? 2 : 1,
+    arrows: false,
+    useTransform: false,
+  };
 
   const clickChangeSwitcher = () => {
     setSwitcher((prevState) => !prevState);
@@ -59,7 +62,7 @@ const LargestFashionGallery: FC = () => {
         <Block>
           <WrapperBlock>
             <Box>
-              <Box>
+              <WrapperButtons>
                 {BTNS.map((btn, index) => (
                   <Button
                     key={index}
@@ -69,7 +72,7 @@ const LargestFashionGallery: FC = () => {
                     {t(btn)}
                   </Button>
                 ))}
-              </Box>
+              </WrapperButtons>
               <AnimationLink text={"open-smth-new.more-brands"} />
             </Box>
             <Cards>

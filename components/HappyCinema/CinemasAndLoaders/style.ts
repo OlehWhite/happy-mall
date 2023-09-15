@@ -1,5 +1,6 @@
 import { styled } from "@mui/material";
 import { CircularProgress } from "@mui/material";
+import Slider from "react-slick";
 
 export const Container = styled("div")(() => {
   return {
@@ -15,6 +16,10 @@ export const WrapperBlocks = styled("div")(() => {
     zIndex: 15,
     margin: "0 auto",
     paddingLeft: 11,
+
+    "@media (max-width: 375px)": {
+      minHeight: 170,
+    },
   };
 });
 
@@ -37,6 +42,12 @@ export const WrapperPlay = styled("div")(() => {
 
     "&:hover": {
       border: `2px solid #C6A687`,
+    },
+
+    "@media (max-width: 375px)": {
+      top: -190,
+      height: 56,
+      width: 56,
     },
   };
 });
@@ -81,6 +92,11 @@ export const Img = styled("img")(() => {
     bottom: 7,
     right: 19,
     width: 12,
+
+    "@media (max-width: 375px)": {
+      right: 18,
+      width: 10,
+    },
   };
 });
 
@@ -89,6 +105,17 @@ export const Circular = styled(CircularProgress)(() => {
     color: "#C6A687",
     "& .MuiCircularProgress-svg": {
       transform: "scale(1.5)",
+    },
+  };
+});
+
+export const CustomSlider = styled(Slider)(() => {
+  return {
+    "@media (max-width: 375px)": {
+      "& img": {
+        maxWidth: 375,
+        height: 175,
+      },
     },
   };
 });

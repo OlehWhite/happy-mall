@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import Slider from "react-slick";
 
 export const Container = styled("div")(() => {
   return {
@@ -58,6 +59,10 @@ export const WrapperLeft = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -69,6 +74,10 @@ export const WrapperRight = styled("div")(() => {
     transform: "translateY(-50%)",
     zIndex: 10,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -84,4 +93,15 @@ export const Movie = styled("div")(() => {
 
 export const LogoMovie = styled("img")(() => {
   return {};
+});
+
+export const CustomSlider = styled(Slider)(() => {
+  return {
+    "@media (max-width: 375px)": {
+      "& img": {
+        maxWidth: 375,
+        height: 195,
+      },
+    },
+  };
 });

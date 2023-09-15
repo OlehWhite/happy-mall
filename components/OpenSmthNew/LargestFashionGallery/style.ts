@@ -27,6 +27,11 @@ export const Title = styled("button")(() => {
     "&:hover": {
       color: "#C6A687",
     },
+
+    "@media (max-width: 375px)": {
+      fontSize: 18,
+      margin: "0 24px 0 10px",
+    },
   };
 });
 
@@ -39,6 +44,10 @@ export const Block = styled("div")(() => {
     display: "flex",
     justifyContent: "space-between",
     margin: "30px 0 0 56px",
+
+    "@media (max-width: 375px)": {
+      margin: "30px 0 0 27px",
+    },
   };
 });
 
@@ -63,14 +72,6 @@ export const Button = styled("button")(({ active }: { active: boolean }) => {
 
 export const WrapperBlock = styled("div")(() => {
   return {};
-});
-
-export const MoreBrands = styled("div")(() => {
-  return {
-    display: "flex",
-    alignItems: "flex-start",
-    cursor: "pointer",
-  };
 });
 
 export const Text = styled("p")(() => {
@@ -112,5 +113,13 @@ export const Name = styled("p")(() => {
     fontSize: 14,
     fontWeight: 400,
     color: "#FDFCFA",
+  };
+});
+
+export const WrapperButtons = styled("div")(() => {
+  return {
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });

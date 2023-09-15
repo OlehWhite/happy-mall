@@ -10,6 +10,11 @@ export const Container = styled("div")(() => {
     boxSizing: "border-box",
     paddingTop: 85,
     marginTop: 55,
+
+    "@media (max-width: 375px)": {
+      padding: "0 20px",
+      minHeight: 890,
+    },
   };
 });
 
@@ -20,6 +25,12 @@ export const Title = styled("h2")(() => {
     lineHeight: "60px",
     color: "#FDFCFA",
     margin: "0 0 40px 0",
+    fontFamily: "global.css",
+
+    "@media (max-width: 375px)": {
+      fontSize: 26,
+      lineHeight: "30px",
+    },
   };
 });
 
@@ -36,7 +47,6 @@ export const Background = styled("img")(() => {
     position: "absolute",
     zIndex: -1,
     maxHeight: 1081,
-    width: "100%",
   };
 });
 

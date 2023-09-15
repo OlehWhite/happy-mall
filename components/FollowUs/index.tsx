@@ -18,6 +18,7 @@ import {
   WrapperFollowers,
   WrapperInfo,
   WrapperSmall,
+  ImgMob,
 } from "./style";
 import { LINKS } from "@/components/FollowUs/links";
 import ModalVideo from "@/components/ModalVideo";
@@ -34,7 +35,7 @@ const FollowUs: FC = () => {
   return (
     <Container>
       <WrapperImg>
-        <Img src="follow-us.png" alt="Follow us" title="Follow us" />
+        <ImgMob src="follow-us.png" alt="Follow us" title="Follow us" />
         <WrapperPlay
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

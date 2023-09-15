@@ -13,6 +13,10 @@ export const HeaderBlock = styled("header")(() => {
     padding: "0 32px",
     boxSizing: "border-box",
     zIndex: 100,
+
+    "@media (max-width: 375px)": {
+      padding: "0 16px",
+    },
   };
 });
 

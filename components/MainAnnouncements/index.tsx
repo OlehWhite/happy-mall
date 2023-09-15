@@ -16,27 +16,30 @@ import {
   ButtonRight,
   WrapperLeft,
   WrapperRight,
+  ImgInfo,
 } from "./style";
 import { BLOCKS, MENUS } from "@/components/MainAnnouncements/menu";
 import Slider from "react-slick";
 import AnimationLink from "@/components/AnimationLink";
 import { useTranslation } from "react-i18next";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 2,
-  arrows: false,
-  useTransform: false,
-};
+import { useMediaQuery } from "@mui/material";
 
 const MainAnnouncements: FC = () => {
   const ref = useRef<Slider | null>(null);
   const [activeBtn, setActiveBtn] = useState<number>(0);
   const [sortEvents, setSortEvents] = useState<string>("main-anons.all-anons");
   const { t } = useTranslation();
+  const isWideScreen = useMediaQuery("(min-width:375px)");
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isWideScreen ? 4 : 1,
+    slidesToScroll: isWideScreen ? 2 : 1,
+    arrows: false,
+    useTransform: false,
+  };
 
   const handleButtonClick = (index: number, event: string): void => {
     setActiveBtn(index);
@@ -84,7 +87,7 @@ const MainAnnouncements: FC = () => {
               t(block.title) === t(sortEvents)
           ).map((block, index) => (
             <Info key={index}>
-              <Img src={block.img} alt={block.title} title={block.title} />
+              <ImgInfo src={block.img} alt={block.title} title={block.title} />
               <WrapperTitle>
                 <Img src={block.icon} alt={block.title} title={block.title} />
                 <TitleInfo>{t(block.title)}</TitleInfo>
