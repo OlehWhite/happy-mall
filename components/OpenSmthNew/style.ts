@@ -53,5 +53,9 @@ export const Background = styled("img")(() => {
 export const GlobalContainer = styled("div")(() => {
   return {
     position: "relative",
+
+    "@media (max-width: 375px)": {
+      overflow: 'hidden'
+    }
   };
 });

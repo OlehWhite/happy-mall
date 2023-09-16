@@ -17,7 +17,7 @@ import { useMediaQuery } from "@mui/material";
 
 const Movies: FC = () => {
   const ref = useRef<Slider | null>(null);
-  const isWideScreen = useMediaQuery("(min-width:375px)");
+  const isWideScreen = useMediaQuery("(min-width:376px)");
 
   const settings = {
     dots: false,

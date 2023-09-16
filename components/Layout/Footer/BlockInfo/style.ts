@@ -10,12 +10,20 @@ export const Title = styled("div")(() => {
   return {
     color: "#FDFCFA",
     marginBottom: 16,
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
 export const Form = styled("form")(() => {
   return {
     display: "flex",
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    },
   };
 });
 
@@ -75,6 +83,10 @@ export const Text = styled("h2")(() => {
     color: "#C9C7C2",
     margin: 0,
     marginLeft: 18,
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+    },
   };
 });
 

@@ -26,7 +26,7 @@ const BeautyAndTenderness: FC = () => {
   const [activeButton, setActiveButton] = useState<number>(0);
   const { t } = useTranslation();
 
-  const isWideScreen = useMediaQuery("(min-width:375px)");
+  const isWideScreen = useMediaQuery("(min-width:376px)");
 
   const settings = {
     dots: false,

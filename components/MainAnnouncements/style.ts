@@ -51,7 +51,7 @@ export const Img = styled("img")(() => {
 export const ImgInfo = styled("img")(() => {
   return {
     "@media (max-width: 375px)": {
-      width: 315,
+      width: 335,
     },
   };
 });

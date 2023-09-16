@@ -4,12 +4,18 @@ export const Container = styled("div")(() => {
   return {
     width: "100%",
     maxWidth: 1100,
+
+
   };
 });
 
 export const WrapperLinks = styled("div")(() => {
   return {
     display: "flex",
+
+    "@media (max-width: 375px)": {
+      marginBottom: 40
+    }
   };
 });
 
@@ -43,6 +49,10 @@ export const PrivacyPolicy = styled("div")(({ theme }) => {
     lineHeight: "20px",
     color: "#C9C7C2",
     marginTop: 156,
+
+    "@media (max-width: 375px)": {
+      display: "none",
+    }
   };
 });
 

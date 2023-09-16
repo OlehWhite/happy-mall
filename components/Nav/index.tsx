@@ -13,6 +13,7 @@ import {
   WrapperAnimation,
   Languages,
   ButtonLanguage,
+  Background,
 } from "./style";
 import { useTranslation } from "react-i18next";
 import AnimationLink from "@/components/AnimationLink";
@@ -21,7 +22,6 @@ import i18n from "i18next";
 const Nav: FC = () => {
   const { t } = useTranslation();
   const [isShowMenu, setIsShowMenu] = useState<boolean>(true);
-  const [activeBtn, setActiveBtn] = useState<number>(0);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -45,6 +45,7 @@ const Nav: FC = () => {
           {isShowMenu ? <Open>☰</Open> : <Close>╳</Close>}
         </Button>
         <Menu active={isShowMenu}>
+          <Background src="background.png" alt="Background" title="Background" />
           {NAV_LINKS.map((link: string, index: number) => (
             <CustomLink href="/" key={index}>
               {t(link)}

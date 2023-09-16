@@ -13,5 +13,19 @@ export const LogoImg = styled("img")(() => {
     display: "flex",
     width: 131,
     cursor: "pointer",
+
+    "@media (max-width: 375px)": {
+      display: 'none'
+    }
   };
 });
+
+export const LogoImgMob = styled('img')(() => {
+  return {
+    display: 'none',
+
+    "@media (max-width: 375px)": {
+      display: 'block'
+    }
+  }
+})

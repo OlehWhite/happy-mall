@@ -29,7 +29,7 @@ const MainAnnouncements: FC = () => {
   const [activeBtn, setActiveBtn] = useState<number>(0);
   const [sortEvents, setSortEvents] = useState<string>("main-anons.all-anons");
   const { t } = useTranslation();
-  const isWideScreen = useMediaQuery("(min-width:375px)");
+  const isWideScreen = useMediaQuery("(min-width:376px)");
 
   const settings = {
     dots: false,

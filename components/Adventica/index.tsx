@@ -34,7 +34,7 @@ const Adventica: FC = () => {
   const [sortEvents, setSortEvents] = useState<string>("adventica.carting");
   const ref = useRef<Slider | null>(null);
   const { t } = useTranslation();
-  const isWideScreen = useMediaQuery("(min-width:375px)");
+  const isWideScreen = useMediaQuery("(min-width:376px)");
 
   const settings = {
     dots: false,

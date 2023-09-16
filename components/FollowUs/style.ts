@@ -59,7 +59,7 @@ export const Img = styled("img")(() => {
 export const ImgMob = styled("img")(() => {
   return {
     "@media (max-width: 375px)": {
-      width: 358,
+      width: 375,
     },
   };
 });
@@ -172,12 +172,20 @@ export const Name = styled("div")(() => {
 export const Images = styled("div")(() => {
   return {
     marginLeft: 8,
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+    },
   };
 });
 
 export const Followers = styled("div")(() => {
   return {
     marginLeft: 8,
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+    },
   };
 });
 

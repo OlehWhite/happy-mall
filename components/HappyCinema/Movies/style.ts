@@ -100,7 +100,7 @@ export const CustomSlider = styled(Slider)(() => {
     "@media (max-width: 375px)": {
       "& img": {
         maxWidth: 375,
-        height: 195,
+        height: 215,
       },
     },
   };

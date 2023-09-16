@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import {
   B,
   Img,
@@ -15,6 +15,9 @@ import IMGFacebook from "public/facebook.png";
 import IMGTiktok from "public/tiktok.png";
 import FooterLogo from "@/components/Layout/Footer/FooterLogo";
 import { useTranslation } from "react-i18next";
+import BlockMenu from "@/components/Layout/Footer/BlockMenu";
+import {useMediaQuery} from "@mui/material";
+import BlockMenuMob from "@/components/Layout/Footer/BlockMenuMob";
 
 const links = [
   {
@@ -28,6 +31,7 @@ const links = [
 
 const BlockLinks: FC = () => {
   const { t } = useTranslation();
+  const isWideScreen = useMediaQuery("(min-width:376px)");
 
   return (
     <Container>
@@ -41,6 +45,7 @@ const BlockLinks: FC = () => {
           </Link>
         ))}
       </WrapperLinks>
+      <BlockMenuMob />
       <PrivacyPolicy>
         <Text>{t("footer.polit")}</Text>
         <WrapperText>

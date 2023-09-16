@@ -2,18 +2,20 @@ import { styled } from "@mui/material";
 
 export const Container = styled("div")(() => {
   return {
-    display: "flex",
-    flexDirection: "column",
-    width: 230,
+    display: "none",
 
     "@media (max-width: 375px)": {
-      display: "none",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      marginBottom: 30,
     },
   };
 });
 
 export const Link = styled("a")(() => {
   return {
+    width: 161,
     fontSize: 16,
     fontWeight: 400,
     lineHeight: "20px",
@@ -24,6 +26,10 @@ export const Link = styled("a")(() => {
 
     "&:hover": {
       color: "#AF8B68",
-    }
+    },
+
+    "@media (max-width: 375px)": {
+      fontSize: 14,
+    },
   };
 });

@@ -97,44 +97,45 @@ export const WrapperImage = styled("div")(() => {
   return {};
 });
 
-export const CustomSlider = styled(Slider)(() => ({
-  ".slick-slide": {
-    position: "relative",
-    transition: "transform 0.3s ease",
-    zIndex: 1,
-    marginRight: -2,
-  },
+export const CustomSlider = styled(Slider)`
+  .slick-slide {
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin-right: -2px;
+  }
 
-  ".slick-list": {
-    height: 570,
-    paddingTop: "168px !important",
-  },
+  .slick-list {
+    height: 570px;
+    padding-top: 168px !important;
+  }
 
-  ".slick-slide.slick-center": {
-    position: "relative",
-    left: -110,
-    zIndex: 10,
-    transform: "scale(1.6)",
-  },
+  .slick-slide.slick-center {
+    position: relative;
+    left: -110px;
+    z-index: 10;
+    transform: scale(1.6);
+  }
 
-  ".slick-slide:not(.slick-center)": {
-    transform: "scale(0.97)",
-    transition: "transform 0.3s ease",
-  },
+  .slick-slide:not(.slick-center) {
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+  }
 
-  "@media (max-width: 375px)": {
-    "& img": {
-      maxWidth: 196,
-      paddingLeft: 138,
-    },
+  @media (max-width: 375px) {
+    & img {
+      max-width: 196px;
+      padding-left: 130px;
+      margin: 0 auto;
+    }
 
-    ".slick-list": {
-      height: 295,
-      paddingTop: "168px !important",
-      marginLeft: -3,
-    },
-  },
-}));
+    .slick-list {
+      height: 295px;
+      padding-top: 100px !important;
+      margin-left: -3px;
+    }
+  }
+`;
 
 export const ButtonLeft = styled("div")(() => {
   return {

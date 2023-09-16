@@ -10,5 +10,12 @@ export const FooterBlock = styled("footer")(() => {
     boxSizing: "border-box",
     marginTop: 72,
     marginBottom: 72,
+
+    "@media (max-width: 375px)": {
+      padding: '0 20px',
+      flexDirection: 'column',
+      marginTop: 30,
+      marginBottom: 30
+    }
   };
 });

@@ -35,6 +35,7 @@ export const Wrapper = styled("div")(() => {
 
     "@media (max-width: 375px)": {
       display: "inline-block",
+      position: 'relative'
     },
   };
 });
@@ -60,7 +61,11 @@ export const Menu = styled("div")(({ active }: { active: boolean }) => {
     height: "100vh",
     backgroundColor: "#1E1E21",
     transition: ".8s",
-    transform: active ? "translateX(-375px)" : "translateX(0px)",
+    transform: active ? "translateX(85px)" : "translateX(-290px)",
+
+    "@media (max-width: 375px)": {
+      overflow: 'hidden'
+    }
   };
 });
 
@@ -129,5 +134,13 @@ export const ButtonLanguage = styled("button")(() => {
     "&:hover": {
       color: "#AF8B68",
     },
+  };
+});
+
+export const Background = styled("img")(() => {
+  return {
+    position: 'absolute',
+    zIndex: -1,
+    top: 0
   };
 });
