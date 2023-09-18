@@ -63,6 +63,10 @@ export const Wrapper = styled("div")(() => {
     justifyContent: "center",
     alignItems: "baseline",
     margin: "25px 0 0 0",
+
+    "@media (max-width: 375px)": {
+      flexWrap: 'wrap'
+    }
   };
 });
 

@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import Slider from "react-slick";
 
 export const Container = styled("div")(() => {
   return {
@@ -20,6 +19,11 @@ export const Wrapper = styled("div")(() => {
     display: "flex",
     justifyContent: "center",
     alignItems: "baseline",
+
+    "@media (max-width: 375px)": {
+      flexWrap: 'wrap',
+      marginBottom: 20
+    }
   };
 });
 

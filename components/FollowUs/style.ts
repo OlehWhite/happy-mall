@@ -115,6 +115,7 @@ export const Text = styled("p")(() => {
 
     "@media (max-width: 375px)": {
       padding: "0 0 24px 20px",
+      maxWidth: 350
     },
   };
 });
@@ -129,6 +130,7 @@ export const BlockLinks = styled("div")(() => {
 
     "@media (max-width: 375px)": {
       margin: "0 0 0 20px",
+      maxWidth: 350
     },
   };
 });
