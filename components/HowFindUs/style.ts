@@ -23,7 +23,7 @@ export const WrapperInfo = styled("div")(() => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 64,
+    paddingBottom: 57,
 
     "@media (max-width: 375px)": {
       height: 715,
