@@ -12,7 +12,7 @@ export const Ul = styled("ul")(() => {
   };
 });
 
-export const Li = styled("li")(({ theme }) => {
+export const Li = styled("li")(() => {
   return {
     listStyleType: "none",
     marginRight: 20,
@@ -35,7 +35,8 @@ export const Wrapper = styled("div")(() => {
 
     "@media (max-width: 375px)": {
       display: "inline-block",
-      position: 'relative'
+      position: 'relative',
+      paddingRight: 16
     },
   };
 });
@@ -54,18 +55,15 @@ export const Menu = styled("div")(({ active }: { active: boolean }) => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: 150,
+    paddingTop: 100,
     position: "absolute",
-    width: 375,
+    width: 400,
     left: 0,
     height: "100vh",
     backgroundColor: "#1E1E21",
     transition: ".8s",
-    transform: active ? "translateX(85px)" : "translateX(-290px)",
-
-    "@media (max-width: 375px)": {
-      overflow: 'hidden'
-    }
+    transform: active ? "translateX(82px)" : "translateX(-294px)",
+    overflow: 'hidden'
   };
 });
 
@@ -110,13 +108,13 @@ export const CustomLink = styled(Link)(() => {
 
 export const WrapperAnimation = styled("div")(() => {
   return {
-    marginTop: 50,
+    marginTop: 30,
   };
 });
 
 export const Languages = styled("div")(() => {
   return {
-    marginTop: 170,
+    marginTop: 120,
   };
 });
 
