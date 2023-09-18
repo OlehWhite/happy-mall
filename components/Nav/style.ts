@@ -58,12 +58,12 @@ export const Menu = styled("div")(({ active }: { active: boolean }) => {
     paddingTop: 100,
     position: "absolute",
     width: 400,
-    left: 0,
     height: "100vh",
     backgroundColor: "#1E1E21",
     transition: ".8s",
     transform: active ? "translateX(82px)" : "translateX(-294px)",
-    overflow: 'hidden'
+    overflow: 'hidden',
+    left: 20
   };
 });
 
