@@ -36,7 +36,6 @@ export const Wrapper = styled("div")(() => {
     "@media (max-width: 375px)": {
       display: "inline-block",
       position: 'relative',
-      paddingRight: 16
     },
   };
 });
@@ -61,9 +60,8 @@ export const Menu = styled("div")(({ active }: { active: boolean }) => {
     height: "100vh",
     backgroundColor: "#1E1E21",
     transition: ".8s",
-    transform: active ? "translateX(82px)" : "translateX(-294px)",
+    transform: active ? "translateX(85px)" : "translateX(-294px)",
     overflow: 'hidden',
-    left: 20
   };
 });
 

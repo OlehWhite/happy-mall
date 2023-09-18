@@ -59,7 +59,7 @@ export const Img = styled("img")(() => {
 export const ImgMob = styled("img")(() => {
   return {
     "@media (max-width: 375px)": {
-      width: 375,
+      width: 358,
     },
   };
 });
@@ -115,7 +115,7 @@ export const Text = styled("p")(() => {
 
     "@media (max-width: 375px)": {
       padding: "0 0 24px 20px",
-      maxWidth: 350
+      maxWidth: 325
     },
   };
 });
@@ -130,7 +130,7 @@ export const BlockLinks = styled("div")(() => {
 
     "@media (max-width: 375px)": {
       margin: "0 0 0 20px",
-      maxWidth: 350
+      maxWidth: 325
     },
   };
 });

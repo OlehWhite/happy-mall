@@ -25,7 +25,7 @@ export const Contacts = styled("div")(() => {
     "@media (max-width: 375px)": {
       paddingLeft: 20,
       maxHeight: "none",
-      maxWidth: 355
+      maxWidth: 338
     },
   };
 });
